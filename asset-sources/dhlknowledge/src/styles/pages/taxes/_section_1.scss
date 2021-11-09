@@ -1,0 +1,90 @@
+.section_1 {
+  text-align: center;
+
+  &__header {
+    position: relative;
+    padding-top: 70px;
+    padding-bottom: 80px;
+
+    &__title {
+      color: $brand-primary;
+      font-family: "Delivery Black Condensed";
+      font-size: 49px;
+      font-weight: 900;
+      letter-spacing: normal;
+      line-height: 51px;
+      text-transform: uppercase;
+      text-align: left;
+    }
+
+    &__subtitle {
+      color: $brand-primary;
+      font-size: 22px;
+      font-weight: 400;
+      letter-spacing: normal;
+      line-height: 28px;
+      text-transform: uppercase;
+      max-width: 485px;
+      text-align: left;
+
+      @include screen-max(sm) {
+        max-width: 90%;
+      }
+    }
+  }
+
+  &__image {
+    position: relative;
+    background-repeat: no-repeat;
+    height: 500px;
+    background-size: cover;
+    background-position: bottom;
+
+    @include screen-max(sm) {
+      background-position: center;
+      background-size: cover;
+    }
+
+    &__gradient {
+      background-image: linear-gradient(267deg, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
+      opacity: 0.87;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 80%;
+      height: 100%;
+
+      @include screen-max(sm) {
+        width: 200%;
+      }
+    }
+  }
+
+  .container-taxes  {
+    &.content {
+      padding-top: 110px;
+      border-bottom: 1px solid rgba(#979797, 0.26);
+
+      @include screen-max(md) {
+        padding-top: 60px;
+        border-bottom: 0;
+      }
+
+      .title {
+        max-width: 850px;
+        margin: 0 auto 25px;
+      }
+
+      .content {
+        max-width: 760px;
+        margin: 0 auto;
+        padding-bottom: 80px;
+
+        @include screen-max(md) {
+          padding-bottom: 50px;
+          border-bottom: 1px solid rgba(#979797, 0.26);
+        }
+      }
+    }
+  }
+}

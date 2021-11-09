@@ -1,0 +1,18 @@
+.page-wrapper{
+  width:100%;
+  max-width:1600px;
+  margin:0 auto;
+  position:relative;
+  overflow:hidden;
+
+  .page-template-career-front-page &{
+    max-width:100%;
+  }
+
+  @media screen and (min-width:1600px){
+    overflow:visible;
+  }
+}
+
+@import "front";
+@import "offers";

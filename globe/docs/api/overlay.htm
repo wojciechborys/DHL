@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+<title>API: Class Overlay</title>
+
+<link rel="stylesheet" href="../../assets/docs.css">
+
+</head>
+<body>
+	<div id="wrapper">
+		
+		<h1>API: Class Overlay</h1>
+		
+		<div id="docs">
+		
+			<h2>Initiate</h2>
+			
+			<p>Initiate with <a href="earth.htm#addoverlay"><em>EarthInstance</em>.addOverlay( properties );</a>.</p>
+
+		
+			<h2 id="prop">Overlay Properties</h2>
+			
+			<p><a href="../examples/overlay-properties.htm"><strong>Example (Overlay Properties)</strong></a></p>
+			
+			<h3>location <var>(lat/lng object)</var> <mark class="animatable"></mark></h3>
+			<p class="default-value"><samp>{ lat: 0, lng: 0 }</samp></p>
+			<p>The geo location where the overlay is placed.</p>
+			
+			<h3>offset <var>(float)</var> <mark class="animatable"></mark> </h3>
+			<p class="default-value"><samp>0</samp></p>
+			<p>Distance to the earth surface.</p>
+			
+			<h3>transform <var>(css transform string)</var></h3>
+			<p class="default-value"><samp>translate(-50%, -100%)</samp></p>
+			<p>The default value <em>translate(-50%, -100%)</em> means the overlay is horizontally centered and moved above the location point.</p>
+			
+			<h3>content <var>(html string)</var></h3>
+			<p class="default-value"><samp>#FF0000</samp></p>
+			<p>The text or HTML content of the overlay.</p>
+			
+			<h3>className <var>(string)</var></h3>
+			<p>Additional class name(s).</p>
+			
+			<h3>events <var>(boolean)</var></h3>
+			<p class="default-value"><samp>false</samp></p>
+			<p>Set to <em>true</em> if add event listeners to the overlay or its children.</p>
+			
+			<h3>visible <var>(boolean)</var></h3>
+			<p class="default-value"><samp>true</samp></p>
+			
+			<h3>occlude <var>(boolean)</var></h3>
+			<p class="default-value"><samp>true</samp></p>
+			<p>If the overlay location is on the backside of the earth the class <em>earth-occluded</em> is added to the overlay, to hide it and ignore any events.</p>
+			<p>Set to <em>false</em> if you want the overlay to remain visible.</p>
+			
+			<h3>zIndex <var>(float)</var></h3>
+			<p class="default-value"><samp>20</samp></p>
+			
+
+			<h3>elementScale <var>(float)</var></h3>
+			<p class="default-value"><samp>0</samp></p>
+			<p class="value-range"><samp>0.0 - 1.0</samp></p>
+			<p>Values greater than 0 adapt the overlay scaling to the scaling of the earth container.</p>
+			
+			<h3>zoomScale <var>(float)</var></h3>
+			<p class="default-value"><samp>1</samp></p>
+			<p class="value-range"><samp>0.0 - 1.0</samp></p>
+			<p>Values greater than 0 adapt the overlay scaling to the earth <em>zoom</em>.</p>
+			
+			<h3>depthScale <var>(float)</var></h3>
+			<p class="default-value"><samp>0</samp></p>
+			<p class="value-range"><samp>0.0 - 1.0</samp></p>
+			<p>Values greater than 0 adapt the overlay scaling to the distance to the camera.</p>
+
+			<h3>element <var>(HTMLElement)</var> <mark class="read-only"></mark></h3>
+			<p>Reference to the overlay HTML element.</p>
+			
+			<h3>earth <var>(EarthInstance)</var> <mark class="read-only"></mark></h3>
+			<p>Reference to the <em>EarthInstance</em>.</p>
+			
+			&nbsp;
+			
+			<div class="hint">
+				You can add custom properties that are copied over to the <em>OverlayInstance</em>.
+			</div>
+			
+			
+			<h2>Overlay Methods</h2>
+			
+				<h3>animate( <var>property</var>, <var>value</var>, <var>animationProperties</var> ) <small>returns <em>AnimationInstance</em></small></h3>
+				<dl>
+				  <dt>property</dt><dd>Name of the animatable property (String)</dd>
+				  <dt>value</dt><dd>Target value</dd>
+				  <dt>animationProperties</dt><dd>Object of <a href="animation.htm#prop">animation properties</a></dd>
+				</dl>
+				<p><a href="../examples/animatable-properties.htm">Example (Animatable Properties)</a></p>
+
+
+				<h3>remove( )</h3>
+				<p>Removes the overlay permanently.</p>
+
+			
+			<h2>Overlay Events</h2>
+				
+				<p>The <em>OverlayInstance</em> has no events but you can set the <em>events</em> property to <em>true</em> add event listeners to the HTML element.</p>
+<code><pre>
+myoverlay.element.addEventListener( 'click', function( ) {
+	alert('click');
+} );
+</pre></code>
+
+&nbsp;
+		
+		</div><!--docs-->
+		
+	</div>
+</body>
+</html>

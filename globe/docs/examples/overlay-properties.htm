@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+<title>Overlay Properties</title>
+
+<link rel="stylesheet" href="../../assets/docs.css">
+
+<style>
+
+.earth-overlay {
+	background-color: white;
+	padding: 1em;
+	border-radius: 0.5em;
+	text-align: center;
+	max-width: 20em;
+	filter: drop-shadow( 0 1px 2px black );
+}
+
+.earth-overlay::after {
+	content: "";
+	background-color: white;
+	position: absolute;
+	left: 50%;
+	top: 100%;
+	width: 0.5em;
+	height: 0.5em;
+	transform: translate(-0.25em, -0.25em) rotate(45deg);
+}
+
+.top-anchor-point {
+	transform-origin: top center;
+}
+.top-anchor-point::after {
+	top: 0;
+}
+
+.top-left-anchor-point {
+	border-top-left-radius: 0;
+}
+.top-left-anchor-point::after {
+	content: none;
+}
+
+.red-bold-text {
+	color: red;
+	font-weight: bold;
+}
+
+.custom-occlude {
+	transition: opacity 1s ease, color 1s ease, filter 1s ease !important;
+}
+.earth-occluded.custom-occlude {
+	opacity: 0.4;
+	color: red;
+	filter: drop-shadow( 0 1px 2px red );
+}
+
+</style>
+
+<script src="../../earth.min.js"></script>
+
+<script>
+
+window.addEventListener( "earthjsload", function() {
+
+
+	var myearth = new Earth( "myearth", {
+		location: { lat: 0, lng: 0 },
+		autoRotate : true,
+		zoomable: true
+	} );
+	
+	
+	myearth.addEventListener( "ready", function() {
+		
+		// custom transform
+		this.addOverlay( {
+			content: 'top anchor point',
+			location : { lat: 35, lng: 0 },
+			transform: 'translate(-50%, 0)',
+			className : 'top-anchor-point'
+		} );
+
+		// no transform
+		this.addOverlay( {
+			content: 'no transform',
+			location : { lat: 35, lng: -45 },
+			transform: '',
+			className : 'top-left-anchor-point'
+		} );
+	
+		// events
+		this.addOverlay( {
+			content: '<a href="#" onclick="alert(\'click\');">clickable</a>',
+			location : { lat: 35, lng: -90 },
+			events: true,
+		} );
+		
+		// content
+		this.addOverlay( {
+			content: '<em style="font-size:1.5em">HTML</em> <br> <button>Button</button>',
+			location : { lat: 35, lng: -135 },
+			events: true,
+		} );	
+		
+		// offset
+		this.addOverlay( {
+			content: 'offset: 1',
+			location : { lat: 35, lng: 180 },
+			offset: 1
+		} );
+		
+		// elementScale
+		this.addOverlay( {
+			content: 'elementScale: 1',
+			location : { lat: 35, lng: 135 },
+			elementScale: 1
+		} );
+		
+		// depthScale
+		this.addOverlay( {
+			content: 'depthScale: 0.75',
+			location : { lat: 35, lng: 90 },
+			depthScale: 0.75
+		} );
+		
+		// zoomScale
+		this.addOverlay( {
+			content: 'zoomScale: 0',
+			location : { lat: 35, lng: 45 },
+			zoomScale: 0
+		} );
+		
+		
+		// occlude
+		this.addOverlay( {
+			content: 'occlude: false',
+			location : { lat: -20, lng: 90 },
+			occlude: false
+		} );
+		
+		// custom occlude
+		this.addOverlay( {
+			content: 'custom occlude',
+			location : { lat: -20, lng: -90 },
+			className: 'custom-occlude'
+		} );
+		
+
+	} );
+	
+	
+} );
+
+</script>
+
+</head>
+<body>
+	<h1>Overlay Properties</h1>
+	
+	<div id="wrapper">		
+	
+		<div id="myearth"></div>
+		
+	</div>
+</body>
+</html>

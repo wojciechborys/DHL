@@ -1,0 +1,126 @@
+.post-single{
+
+  &__header{
+    padding-bottom:4vw;
+    float:left; 
+
+    .wrap--has-bg &{
+      padding-bottom:0;
+
+      @include media-breakpoint-up(sm){
+        // height:$mainHeaderBgHeight;
+        // margin-top:$mainHeaderBgMToSingle;
+        height: 400px;
+        margin-top: -350px;
+      }
+
+      @include media-breakpoint-up(md){
+        // height:$mainHeaderBgHeightMd;
+        // margin-top:$mainHeaderBgMTopMdSingle;
+        height: 400px;
+        margin-top: -350px;
+      }
+
+      @include media-breakpoint-up(xl){
+        height:$mainHeaderBgMTop;
+        margin-top:$mainHeaderBgMTopMdSingle;
+      }
+      
+      @media(min-width:1440px){
+        height:$mainHeaderBgHeightXxl;
+        margin-top:$mainHeaderBgMTopXxl;     
+      }
+      // @include media-breakpoint-up(xxl){
+        // height:$mainHeaderBgHeightXxl;
+        // margin-top:$mainHeaderBgMTopXxl; 
+      // }
+
+    }
+  }
+
+  &__main-tag{
+    margin-bottom:8px;
+    display:inline-block;
+
+    @include media-breakpoint-up(md){
+      margin-bottom:12px;
+    }
+  }
+
+  &__header-tag{
+    min-width:100px;
+    padding:4px;
+    border-radius:3px;
+    display:inline-block;
+    background-color:#aaa;
+    color:#fff;
+    font-family:$demi-font-family;
+    font-size:.75rem;
+    line-height:1.2;
+    text-align:center;
+    text-transform:uppercase;
+
+    @include hover-focus{
+      color:#fff;
+      text-decoration:none;
+      background-color:#bbb;
+    }
+
+    @include media-breakpoint-up(md){
+      min-width:120px;
+      padding:8px;
+    }
+
+    @include media-breakpoint-up(lg){
+      font-size:.875rem;
+    }
+  }
+
+  &__title{
+    margin-top:0;
+    margin-bottom:8px;
+    color:#000;
+    font-family:$bold-font-family;
+    font-weight:700;
+    font-size:1.5rem;
+    text-transform:uppercase;
+    background-color: rgba(255,255,255,0.8);
+
+    @include media-breakpoint-up(sm){
+      font-size:1.875rem;
+    }
+
+    @include media-breakpoint-up(md){
+      margin-bottom:12px;
+      font-size:1.75rem;
+    }
+
+    @include media-breakpoint-up(lg){
+      font-size:2rem;
+    }
+
+    @include media-breakpoint-up(xl){
+      margin-bottom:18px;
+      font-size:2.4rem;
+    }
+
+    @media(min-width:1440px){
+      font-size:2.8rem; 
+    }
+  }
+
+  &__subtitle{
+    color:#000;
+    font-size:1rem;
+
+    @include media-breakpoint-up(lg){
+      font-size:1.125rem;
+    }
+
+    @include media-breakpoint-up(lg){
+      font-size:1.25rem;
+    }
+
+  }
+
+}

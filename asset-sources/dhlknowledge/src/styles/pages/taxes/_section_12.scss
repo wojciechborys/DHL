@@ -1,0 +1,92 @@
+.section_12 {
+
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  @include screen-max(md) {
+    padding-top: 10px;
+    padding-bottom: 0;
+  }
+
+  .container-taxes {
+    .content {
+      padding-bottom: 91px;
+      padding-top: 40px;
+      max-width: 940px;
+      margin: 0 auto;
+
+      @include screen-max(md) {
+        padding-bottom: 60px;
+      }
+    }
+  }
+
+  .play-btn {
+    height: 137px;
+    width: 137px;
+  }
+
+  .ytVideo {
+    max-height: 466px;
+
+  }
+
+  &--title {
+    color: #323232;
+    font-family: 'Delivery Black Condensed';
+    font-size: 40px;
+    font-weight: 900;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 48px;
+    text-align: center;
+    text-transform: uppercase;
+    @include screen-max(md) {
+      font-size: 25px;
+    }
+  }
+
+  &--box-subtitle {
+    display: flex;
+    justify-content: center;
+  }
+
+  &--subtitle {
+    width: 80%;
+    color: #696969;
+    font-family: 'Delivery Regular', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 31px;
+    text-align: center;
+
+    @include screen-max(md) {
+      font-size: 15px;
+      width: 100%;
+    }
+  }
+
+  &__video {
+    margin-top: 50px;
+
+    @include screen-max(lg) {
+      display: none;
+      width: 101%;
+    }
+  }
+
+  &__video-mobile {
+    display: none;
+    @include screen-max(lg) {
+      margin-top: 50px;
+      width: 101%;
+      display: block;
+      max-width: 177.78vh;
+      height: 56.25vw;
+      max-height: 100vh;
+      padding: 0;
+    }
+  }
+}

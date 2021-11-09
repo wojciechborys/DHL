@@ -1,0 +1,10 @@
+.love-button{
+    &, &:hover, &:active, &:focus{
+        color: inherit;
+    }
+}
+.likes{
+    display:inline-block;
+    background: url('../images/heart.png') left center no-repeat;
+    padding-left:20px;
+}

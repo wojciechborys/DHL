@@ -1,0 +1,22 @@
+.fp-custom-content{
+  padding-top:30px;
+  padding-bottom:60px;
+
+  &__content{
+    margin-bottom:30px;
+  }
+
+  &__title{
+    margin-bottom:20px;
+    text-align:center;
+    text-transform:uppercase;
+  }
+
+  p{
+    text-align:center;
+  }
+
+  &__more{
+    text-align:center;
+  }
+}

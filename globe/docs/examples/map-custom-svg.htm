@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+<title>Custom SVG</title>
+
+<link rel="stylesheet" href="../../assets/docs.css">
+
+<link rel="stylesheet" href="../../src/earth.css">
+<script src="../../earth.core.min.js"></script>
+
+<script>
+
+var ajax = new XMLHttpRequest();
+
+ajax.onreadystatechange = function() {
+	if ( this.readyState == 4 ) {
+	
+		Earth.mapSvg = this.responseText;
+		
+		var myearth = new Earth( "myearth", {
+			location : { lat: 23, lng: 23 },
+			mapHitTest : true
+		} );
+		
+		myearth.addEventListener( "mousedown", function( event ) {
+			
+			// show info
+			document.getElementById( 'info' ).innerHTML = (( event.id ) ? event.id : 'SEA') + ' @ ' + event.location.lat.toFixed(2) + ', ' + event.location.lng.toFixed(2);
+
+		} );
+		
+	}
+};
+
+ajax.open("GET", '../../assets//simple-map.svg', true);
+ajax.send();
+
+</script>
+
+</head>
+<body>
+	<h1 style="padding-bottom: 1em;">Custom SVG</h1>	
+	<div id="wrapper">
+		
+		<div id="info">click on the earth</div>
+		<div id="myearth"></div>
+		
+	</div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+.page-template-career-front-page {
+
+  .positions-section{
+    background:#fff no-repeat 50% 20% / 100% auto;
+
+    @include media-breakpoint-up(md){
+      background-image:url("../images/bg-side-xl.png");
+    }
+
+    @include media-breakpoint-up(xl){
+      background-image:url("../images/bg-side-xl.png");
+    }
+
+    @media screen and (min-width:1400px){
+      background-image:url("../images/bg-side-xxl.png");
+      background-position:50% 50%;
+    }
+  }
+
+  .contact-form{
+    background:#fff no-repeat 50% 30% / 100% auto;
+
+    @include media-breakpoint-up(md){
+      background-image:url("../images/bg-side-xxl.png");
+    }
+
+    @include media-breakpoint-up(lg){
+      background-position:50% 10%;
+    }
+
+    @include media-breakpoint-up(xl){
+      background-position:50% 5%;
+    }
+
+    @media screen and (min-width:1400px){
+      background-position:50% 70%;
+    }
+  }
+
+  .fp-custom-content{
+    background:#fff no-repeat 50% 0 / 100%;
+
+    @include media-breakpoint-up(md){
+      background-image:url("../images/bg-side-xxl.png");
+    }
+
+    @include media-breakpoint-up(lg){
+      background-position:50% 20%;
+    }
+  }
+
+}
+
+@import "front/intro";
+@import "front/videos";
+@import "front/custom-content";
+@import "front/offers";
+@import "front/discover";
+@import "front/carousel";
+@import "front/prizes";
+@import "front/contact";
+@import "front/contact-form";

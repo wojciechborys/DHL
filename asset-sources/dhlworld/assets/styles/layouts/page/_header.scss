@@ -1,0 +1,16 @@
+.page-header{
+
+  &--search{
+    margin-top:2vw;
+    margin-bottom:4vw;
+
+    .page-header__title{
+      text-align:center;
+    }
+  }
+
+  &__emphasis{
+    font-style:italic;
+  }
+
+}

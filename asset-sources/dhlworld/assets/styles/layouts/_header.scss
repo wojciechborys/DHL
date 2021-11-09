@@ -1,0 +1,357 @@
+body{
+  padding-top:80px;
+  position:relative;
+
+  &.no-top-image{
+    padding-top:120px;
+  }
+
+  &:before{
+    height:80px;
+    position:absolute;
+      top:0; bottom:auto;
+      left:0; right:0;
+    background-color:#000;
+    content:"";
+  }
+
+  &#tinymce{
+    &:before{
+      display:none;
+    }
+  }
+}
+
+.main-header{
+  min-height:80px;
+  background-color:#000;
+  position:absolute;
+    top:0; bottom:auto;
+    left:0; right:0;
+  transition:transform 150ms ease-in;
+  transform:translateY(0);
+  font-size:16px;
+  z-index:$zindex-fixed;
+
+  // jeśli <body> nie będzie miał position:relative, odkomentować
+  .admin-bar &{
+  //   transform:translateY(46px);
+
+    &--fixed{
+      transform:translateY(136px);
+    }
+
+    @media screen and (min-width:783px) {
+  //     transform:translateY(32px);
+
+      &--fixed{
+        transform:translateY(122px);
+      }
+    }
+  }
+
+  &--fixed{
+    position:fixed;
+      top:-90px;
+    transform:translateY(90px);
+  }
+
+  &__navbar{
+    width:100%;
+    padding:0 ($grid-gutter-width / 2);
+  }
+
+  &__brand{
+    width:220px;
+    height:80px;
+    margin-left:($grid-gutter-width / -2);
+    display:block;
+    background:$brand-secondary url('../images/dhl-express.png') no-repeat 50% 50%;
+    background-size:100% auto;
+    text-indent:-99999px;
+    overflow:hidden;
+
+    @include media-breakpoint-up(sm){
+      width:260px;
+    }
+
+    @include media-breakpoint-up(lg){
+      max-width:25%;
+      margin-left:0;
+    }
+  }
+}
+
+.nav-primary{
+  width:100%;
+  min-height:80px;
+  margin-left:0;
+  margin-right:auto;
+
+  @include media-breakpoint-up(lg){
+    max-width:75%;
+  }
+
+  &__toggler{
+    cursor:pointer;
+  }
+
+  &__list{
+    width:100%;
+    margin-top:0;
+    margin-bottom:0;
+    list-style:none;
+  }
+
+  &__item{
+    max-width:100%;
+    min-height:1px;
+    padding-right:20px;
+    padding-left:20px;
+    position:relative;
+    display:block;
+    float:left;
+    font-size:1rem;
+
+    @include media-breakpoint-up(md){
+      max-width:20%;
+      padding:21px 10px 0;
+      font-size:.875rem;
+    }
+
+    @include media-breakpoint-up(lg){
+    //  width:20%;
+      padding:20px 20px 0;
+      font-size:1rem;
+    }
+
+    &--current{
+      .nav-primary__link{
+        color:$brand-secondary;
+      }
+    }
+
+    &--search,
+    &--signin{
+      margin:0;
+
+      @include media-breakpoint-up(lg){
+        padding-left:20px;
+        padding-right:20px;
+      }
+    }
+
+    &--signin{
+      padding-bottom:21px;
+
+      @include media-breakpoint-up(md){
+        width:25%;
+      }
+
+      @include media-breakpoint-up(lg){
+        width:30%;
+      }
+    }
+
+    &--search{
+      // transition:background-color 300ms ease-in;
+
+      @include media-breakpoint-up(md){
+        max-width:15%;
+
+        &:hover,
+        &.nav-primary__item--hovered{
+          background-color:#111;
+        }
+      }
+
+      @include media-breakpoint-up(lg){
+        max-width:10%;
+        margin-right:22px;
+      }
+
+      &:after{
+        width:1px;
+        height:25px;
+        display:block;
+        position:absolute;
+        top:28px; bottom:auto;
+        left:auto; right:0;
+        background-color:#424242;
+
+        @include media-breakpoint-up(md){
+          top:30px;
+          content:"";
+        }
+
+        @include media-breakpoint-up(lg){
+          top:28px;
+        }
+      }
+
+      .nav-primary__link{
+        height:0;
+        width:0;
+        text-indent:-9999px;
+        overflow:hidden;
+
+        @include media-breakpoint-up(md){
+          width:35px;
+          height:25px;
+          margin-top:4px;
+          background:url('../images/search-icon.png') no-repeat 50% 50%;
+        }
+
+        @include media-breakpoint-up(lg){
+          margin-top:0;
+        }
+      }
+    }
+  }
+
+  &__link{
+    padding:0;
+    display:block;
+    color:#fff;
+    line-height:80px;
+    text-align:center;
+    vertical-align:middle;
+
+    @include media-breakpoint-up(md){
+      min-height:38px;
+      line-height:38px;
+    }
+
+    &:hover{
+      color:lighten($brand-secondary, 16%);
+      text-decoration:none;
+    }
+
+    &.btn{
+      line-height:2;
+    }
+  }
+
+  &__link-text{
+    display:inline-block;
+    line-height:normal;
+    vertical-align:middle;
+  }
+
+  &__form{
+    max-width:320px;
+    min-height:80px;
+    margin:0 auto;
+    padding:21px 0;
+
+    @include media-breakpoint-up(md){
+      width:360px;
+      height:60px;
+      min-height:none;
+      padding:12px 18px 0 18px;
+      display:none;
+      position:absolute;
+        top:78px; bottom:auto;
+        left:auto; right:0;
+        background-color:#111;
+      z-index:99;
+    }
+
+    &--active{
+      display:block;
+    }
+
+    input{
+      max-width:240px;
+      margin:0;
+      border-width:0 0 1px;
+      border-color:#424242;
+      border-style:solid;
+      display:inline-block;
+      background-color:#000;
+      color:#fff;
+      vertical-align:middle;
+
+      &:focus,
+      &:active{
+        border-bottom-color:#555;
+        outline:0;
+      }
+    }
+  }
+
+  &__search-input{
+    width:80%;
+    padding:8px;
+  }
+
+  &__search-btn{
+    width:38px;
+    height:38px;
+    margin-left:auto;
+    padding:.5rem .75rem;
+    border:0 none;
+    overflow:hidden;
+    display:block;
+    float:right;
+    background:rgba(0,0,0,0) url('../images/search-icon.png') no-repeat 50% 50%;
+    text-indent:-9999px;
+    cursor:pointer;
+  }
+
+  &__signin-btn{
+    width:100%;
+    max-width:320px;
+    margin:20px auto 0;
+    display:block;
+    text-align:center;
+
+    @include media-breakpoint-up(md){
+      margin-top:4px;
+      font-size:.75rem;
+    }
+
+    @include media-breakpoint-up(lg){
+      margin-top:0;
+      font-size:1rem;
+    }
+  }
+}
+
+.mm-search-form{
+  position:absolute;
+  top:80px;
+  width:360px;
+  height:60px;
+  background:#000;
+  left:0;
+  display:none;
+  z-index:99;
+  padding: 12px 18px 0 18px;
+
+  @include media-breakpoint-up(lg) {
+    left:auto;
+    right:0;
+    transform: translateX(25%);
+  }
+
+  &--active{
+    display:block;
+  }
+
+  input{
+    max-width:240px;
+    margin: 0 24px 0 0;
+    background: #000;
+    border:0;
+    border-bottom: 1px solid #424242;
+    color: #fff;
+    vertical-align: middle;
+
+    &:focus, &:active{
+      border:0;
+      border-bottom: 1px solid #424242;
+      outline:0;
+    }
+  }
+}

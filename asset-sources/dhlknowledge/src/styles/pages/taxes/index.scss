@@ -1,0 +1,212 @@
+.taxes-page {
+  @import "media";
+  color: #212121;
+  padding-top: 80px;
+
+  .font-weight-bold {
+    font-family: "Delivery Bold";
+  }
+
+  b {
+    font-family: "Delivery Bold";
+  }
+
+  .border-bottom {
+    border-bottom: 1px solid rgba(#979797, 0.26) !important;
+  }
+
+  .container-taxes {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 28px;
+
+    @include screen-min(xl) {
+      padding: 0;
+    }
+  }
+
+  .container-taxes-small {
+    max-width: 1030px;
+    margin: 0 auto;
+    padding: 0 28px;
+
+    @include screen-min(xl) {
+      padding: 0;
+    }
+  }
+
+  .title {
+    color: $brand-primary;
+    font-family: "Delivery Black Condensed";
+    font-size: 40px;
+    font-weight: 900;
+    letter-spacing: normal;
+    line-height: 48px;
+    text-transform: uppercase;
+    @include screen-max(xs)
+    {
+      font-size: 30px;
+    }
+  }
+
+  .text {
+    color: #212121;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Delivery Regular";
+  }
+
+  &__list {
+    padding-left: 18px;
+
+    &__item {
+      padding-left: 6px;
+
+      &::marker {
+        color: $brand-primary;
+      }
+    }
+
+    &.marker-ok {
+      .taxes-page__list__item {
+        &::marker {
+          width: 23px;
+          height: 17px;
+          //content: url(../images/taxs-page/ok-icon-list.png);
+          content: url(../images/green_check.png);
+        }
+      }
+    }
+  }
+
+  .table {
+    &.table-bordered th {
+      border: 1px solid #e4e4e4;
+    }
+
+    &.table-bordered td {
+      border: 1px solid #e4e4e4;
+    }
+  }
+
+  .taxes-file {
+    display: flex;
+    max-width: 610px;
+    border-radius: 16px;
+    overflow: hidden;
+    color: #212121;
+    box-shadow: 0 5px 0 rgba(201, 201, 201, 0.5);
+
+    @include screen-max(sm) {
+      flex-direction: column;
+    }
+
+    &__image {
+      min-width: 260px;
+      object-fit: cover;
+      object-position: left top;
+
+      @include screen-max(sm) {
+        width: 100%;
+        min-width: inherit;
+        max-height: 165px;
+        height: 50%;
+      }
+    }
+
+    &__content {
+      width: 55%;
+      padding: 25px 30px 30px 25px;
+
+      @include screen-max(sm) {
+        width: 100%;
+        align-items: start;
+      }
+
+      img {
+        object-fit: contain;
+        margin-right: 17px;
+      }
+    }
+  }
+
+  .popular_questions{
+    .container-taxes {
+      padding-top: 20px;
+    }
+
+    .container-taxes-small {
+      padding-top: 50px;
+
+      @include screen-max(md) {
+        padding-top: 25px;
+      }
+    }
+  }
+
+  @import "fonts.scss";
+  @import "section_1";
+  @import "section_2";
+  @import "section_3";
+  @import "section_4";
+  @import "section_5";
+  @import "section_6";
+  @import "section_7";
+  @import "section_8";
+  @import "section_10";
+  @import "section_11";
+  @import "section_12";
+  @import "section_13";
+}
+
+.page-template-knowledge-taxes {
+  .header-up {
+    display: none !important;
+  }
+
+  .banner__header {
+    top: 0 !important;
+
+    &.header_top_enable {
+      top: 0 !important;
+    }
+  }
+
+ &.admin-bar {
+   .banner__header {
+     top: 32px !important;
+
+     @include media-breakpoint-down(md){
+       top: 0 !important;
+     }
+
+     &.header_top_enable {
+       top: 32px !important;
+
+       @include media-breakpoint-down(md){
+         top: 40px !important;
+       }
+     }
+   }
+
+   .taxes-page {
+     @media only screen and (max-width: 767px) {
+       padding-top: 65px;
+     }
+   }
+ }
+}
+
+.accordion.list{
+  .card{
+    .card-header{
+      &--btn{
+        &::after{
+          @include media-breakpoint-down(xs){
+            right: 0px !important;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+<title>API: Class Marker</title>
+
+<link rel="stylesheet" href="../../assets/docs.css">
+
+</head>
+<body>
+	<div id="wrapper">
+		
+		<h1>API: Class Marker</h1>
+		
+		<div id="docs">
+		
+			<h2>Initiate</h2>
+			
+			<p>Initiate with <a href="earth.htm#addmarker"><em>EarthInstance</em>.addMarker( properties )</a></p>
+
+		
+			<h2 id="prop">Marker Properties</h2>
+			<p><a href="../examples/marker-properties.htm"><strong>Example (Marker Properties)</strong></a></p>
+			
+			<h3>location <var>(lat/lng object)</var> <mark class="animatable"></mark></h3>
+			<p class="default-value"><samp>{ lat: 0, lng: 0 }</samp></p>
+			<p>The geo location where the marker is placed.</p>
+			
+			<h3>offset <var>(float)</var> <mark class="animatable"></mark> </h3>
+			<p class="default-value"><samp>0</samp></p>
+			<p>Distance to the earth surface.</p>
+			
+			<h3>mesh <var>(string) or (array of strings)</var> <mark class="init-only"></mark></h3>
+			<p class="default-value"><samp>["Pin", "Needle"]</samp></p>
+			<p>A marker consists of one or more meshes. See the following example for all bundled mesh names:<br>
+			<a href="../examples/marker-default-meshes.htm">Example (Default Meshes)</a></p>
+			<p><a href="../examples/marker-custom-meshes.htm">Example (Custom Meshes)</a></p>
+			
+			<h3>color, color2, ..., color5 <var>(color)</var> <mark class="animatable"></mark></h3>
+			<p class="default-value"><samp>#FF0000</samp></p>
+			<p>Colors of the meshes (in the order in which they are defined).</p>
+			
+			<h3>scale <var>(float)</var> <mark class="animatable"></mark> </h3>
+			<p class="default-value"><samp>1</samp></p>
+			
+			<h3>visible <var>(boolean)</var></h3>
+			<p class="default-value"><samp>true</samp></p>
+			
+			
+			<h3>hotspot <var>(boolean)</var> <mark class="init-only"></mark></h3>
+			<p class="default-value"><samp>true</samp></p>
+			<p>Set to <em>true</em> if you add events to this marker.</p>
+			
+			<div class="advanced">
+			
+				<h3>hotspotRadius <var>(float)</var> <mark class="init-only"></mark> </h3>
+				<p class="default-value"><samp>0.5</samp></p>
+				
+				<h3 style="padding-top:0;">hotspotHeight <var>(float)</var> <mark class="init-only"></mark> </h3>
+				<p class="default-value"><samp>1.6</samp></p>
+				<p>See <a href="earth.htm#showhotspots">showHotspots</a>.</p>
+
+			</div><!--advanced-->
+			
+
+			<h3>Advanced:</h3>
+
+			<div class="advanced">
+			
+				<h3>align <var>(boolean)</var></h3>
+				<p class="default-value"><samp>true</samp></p>
+				<p>If set to <em>false</em> the marker points up and is not aligned with the earth surface.</p>
+				
+				<h3>rotationX, rotationY, rotationZ <var>(float)</var> <mark class="animatable"></mark> </h3>
+				<p class="default-value"><samp>0</samp></p>
+				<p>Rotation in degrees.</p>
+				
+				<h3>lookAt <var>(lat/lng object) or false</var> <mark class="animatable"></mark> </h3>
+				<p class="default-value"><samp>false</samp></p>
+				<p>The marker is rotated (Y) to look at the defined lat/lng position.</p>
+
+				<h3>opacity <var>(float)</var> <mark class="animatable"></mark> </h3>
+				<p class="default-value"><samp>1</samp></p>
+				<p class="value-range"><samp>0.0 - 1.0</samp></p>
+			
+				<h3>transparent <var>(boolean)</var> <mark class="init-only"></mark></h3>
+				<p>Set to <em>true</em> if need <em>opacity</em> or want to overlay transparent markers/lines with <em>alwaysOnTop</em>.</p>
+		
+				<h3>shininess <var>(float)</var> <mark class="animatable"></mark></h3>
+				<p class="default-value"><samp>0.1</samp></p>
+				<p class="value-range"><samp>0.0 - 1.0</samp></p>
+				<p>Only if <em>light = sun</em>. Shininess of the surface.</p>
+				
+				<h3>flatShading <var>(boolean)</var></h3>
+				<p class="default-value"><samp>false</samp></p>
+				<p>Only if <em>light != none</em>. Shading of the surface.</p>
+			
+				<h3>castShadow <var>(boolean)</var></h3>
+				<p class="default-value"><samp>true</samp></p>
+				<p>See <a href="earth.htm#shadows">shadows</a>.</p>
+			
+				<h3>receiveShadow <var>(boolean)</var></h3>
+				<p class="default-value"><samp>false</samp></p>
+				<p>See <a href="earth.htm#shadows">shadows</a>.</p>
+				
+				<h3>alwaysBehind <var>(boolean)</var></h3>
+				<p class="default-value"><samp>false</samp></p>
+				<p>The marker is placed behind other markers/lines of the same group (opaque or transparent).</p>
+				
+				<h3>alwaysOnTop <var>(boolean)</var></h3>
+				<p class="default-value"><samp>false</samp></p>
+				<p>The marker is placed on top of other markers/lines of the same group (opaque or transparent).</p>
+				
+				<h3>earth <var>(EarthInstance)</var> <mark class="read-only"></mark></h3>
+				<p>Reference to the <em>EarthInstance</em>.</p>
+				
+				<h3>object3d <var>(THREE.Object3D)</var></h3>
+				<p><a href="https://threejs.org/docs/">About THREE.js</a></p>
+
+			</div><!--advanced-->
+			
+			&nbsp;
+			
+			<div class="hint">
+				You can add custom properties that are copied over to the <em>MarkerInstance</em>.
+			</div>
+			
+			
+			<h2>Marker Methods</h2>
+			
+				<h3>animate( <var>property</var>, <var>value</var>, <var>animationProperties</var> ) <small>returns <em>AnimationInstance</em></small></h3>
+				<dl>
+				  <dt>property</dt><dd>Name of the animatable property (String)</dd>
+				  <dt>value</dt><dd>Target value</dd>
+				  <dt>animationProperties</dt><dd>Object of <a href="animation.htm#prop">animation properties</a></dd>
+				</dl>
+				<p><a href="../examples/animatable-properties.htm">Example (Animatable Properties)</a></p>
+
+				<h3>remove( )</h3>
+				<p>Removes the marker permanently.</p>
+				
+			
+			<h2>Marker Events</h2>
+			
+
+				<h3 id="click">click</h3>
+				<p>The event will be fired by a click on the hotspot area.</p>
+<code><pre>
+mymarker.addEventListener( 'click', function( ) {
+	this.earth.location = this.location;
+	console.log( this );
+} );
+</pre></code>
+
+<code><pre>
+mymarker.addEventListener( 'click', function( ) {
+	alert( this.myCustomProperty );
+} );
+</pre></code>
+
+
+				<h3>mouseover, mouseout</h3>
+				<p>The events will be fired when the mouse enters or leaves the hotspot area.</p>
+<code><pre>
+mymarker.addEventListener( 'mouseover', function( ) {
+	myoverlay.visible = true;
+} );
+
+mymarker.addEventListener( 'mouseout', function( ) {
+	myoverlay.visible = false;
+} );
+</pre></code>
+
+				&nbsp;
+				
+				<div class="hint">
+					The events are only dispatched if <em>hotspot</em> is <em>true</em>. You may need to adjust the <em>hotspotRadius</em> and <em>hotspotHeight</em>.
+				</div>
+				<div class="hint">
+					<em>this</em> refers to the MarkerInstance.
+				</div>
+				
+		
+		</div><!--docs-->
+		
+	</div>
+</body>
+</html>

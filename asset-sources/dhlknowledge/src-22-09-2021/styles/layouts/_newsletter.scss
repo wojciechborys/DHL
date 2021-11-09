@@ -1,0 +1,13 @@
+.newsletter_form {
+	background-image: url(../images/newsletter_bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	min-height: 478px;
+	@include media-breakpoint-down(md) {
+		background: $ultra-light-gray;
+	}
+}
+
+.newsletter__label {
+	padding-left: 21px;
+}

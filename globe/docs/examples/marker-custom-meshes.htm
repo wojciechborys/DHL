@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+<title>Custom Mesh</title>
+
+<link rel="stylesheet" href="../../assets/docs.css">
+
+<script src="../../earth.min.js"></script>
+
+<script>
+
+window.addEventListener( "earthjsload", function() {
+
+	var myearth = new Earth( "myearth", {
+		location: { lat: 23, lng: 23 }
+	} );
+	
+
+	/* PYRAMID */
+	/* add mesh from obj string */
+	
+	Earth.addMesh( 'o Pyramid\nv 0.25 0.0 -0.25\nv 0.25 0.0 0.25\nv -0.25 0.0 0.25\nv -0.25 0.0 -0.25\nv -0.0 0.5 0.0\ns off\nf 2 4 1\nf 1 5 2\nf 2 5 3\nf 3 5 4\nf 5 1 4\nf 2 3 4\n' );
+	
+	myearth.addEventListener( "ready", function() {
+
+		this.addMarker( {
+			mesh : "Pyramid",
+			color: 'red',
+			location : { lat: 20, lng: 25 },
+			scale: 2.5,
+			offset: -0.01
+		} );
+
+	} );
+	
+	
+	/* RING */
+	/* load obj file */
+	/* This example does not work with the file protocol due to browser security restrictions! */
+
+	myearth.addEventListener( "ready", function() {
+	
+		var ajax = new XMLHttpRequest();
+		
+		ajax.onreadystatechange = function() {
+			if ( this.readyState == 4 ) {
+			
+				Earth.addMesh( this.responseText );
+				
+				myearth.addMarker( {
+					mesh : "Ring",
+					color: 'blue',
+					location : { lat: 10, lng: 10 },
+					scale: 1.75
+				} );
+				
+			}
+		};
+		
+		ajax.open("GET", '../../assets/ring.obj', true);
+		ajax.send();
+
+	} );
+	
+	
+} );
+
+</script>
+
+</head>
+<body>
+	<h1>Custom Mesh</h1>
+
+	<div id="wrapper">
+	
+		<div id="myearth"></div>
+		
+	</div>
+</body>
+</html>

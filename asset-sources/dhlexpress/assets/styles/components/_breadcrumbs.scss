@@ -1,0 +1,17 @@
+.site-breadcrumbs{
+  margin-bottom:0;
+  color:#d1d1d1;
+  font-size:.8125rem;
+
+  .breadcrumb_last{
+    color:#b5b5b5;
+  }
+
+  a{
+    color:inherit;
+
+    @include hover-focus{
+      text-decoration:underline;
+    }
+  }
+}

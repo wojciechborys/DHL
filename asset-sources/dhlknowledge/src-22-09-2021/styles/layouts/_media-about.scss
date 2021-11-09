@@ -1,0 +1,32 @@
+.media-box {
+  padding: 20px 0px;
+  border-bottom:  1px solid #ededed;
+  &:first-child {
+    border-top:  1px solid #ededed;
+  }
+  &__image {
+    max-width: 100px;
+  }
+  &__desc {
+    margin-left: 50px;
+  }
+  &__title {
+    @extend .font__title--06;
+    @extend .font__color--default;
+    transition: all 0.3s;
+  }
+  &__date {
+    @extend .font__subtitle--16-2;
+    @extend .font__color--red2;
+    font-weight: 500;
+  }
+  &:hover {
+    text-decoration: none;
+    .media-box__title {
+      color: $black;
+    }
+    .media-box__title2 {
+      color: $black;
+    }
+  }
+}

@@ -1,0 +1,66 @@
+.section_cta {
+  z-index: 1;
+  padding: 187px 0 167px 0;
+  @include screen-max(lg){
+    padding: 155px 0 140px 0;
+  }
+  @include screen-max(md){
+    padding: 135px 0 120px 0;
+  }
+  @include screen-max(sm){
+    padding: 120px 0 100px 0;
+  }
+  @include screen-max(xs){
+    padding: 100px 0 80px 0;
+  }
+  &--title {
+    font-family: "Delivery Black Condensed";
+    color: #323232;
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 48px;
+    text-align: center;
+    font-style: normal;
+    letter-spacing: normal;
+    text-transform: uppercase;
+    @include screen-max(lg){
+      font-size: 32px;
+    }
+    @include screen-max(md){
+      font-size: 30px;
+    }
+    @include screen-max(sm){
+      font-size: 25px;
+    }
+    @include screen-max(xs){
+      font-size: 24px;
+    }
+  }
+  &--subtitle {
+    margin: 0 auto;
+    width: 762px;
+    margin-top: 17px;
+    color: #666666;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 31px;
+    text-align: center;
+
+    @include screen-max(md){
+      width: 100%;
+    }
+  }
+  &--btn {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+
+    .btn--express {
+      @include screen-max(md){
+        width: unset;
+      }
+    }
+  }
+
+
+}

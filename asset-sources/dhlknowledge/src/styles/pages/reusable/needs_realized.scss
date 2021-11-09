@@ -1,0 +1,85 @@
+.section_needs {
+  padding-top: 210px;
+  @include screen-max(md) {
+    padding: 0 !important;
+  }
+  .needs-list {
+    list-style-type: none;
+    margin-bottom: 0;
+
+    &__item {
+      color: #0e0e0e;
+      font-weight: 400;
+      font-size: 19px;
+      display: flex;
+      align-content: center;
+      background: url(../images/check-red.png) no-repeat left;
+      padding: 40px 25px 35px 45px;
+      //padding-left: 40px;
+      background-size: 27px 27px;
+      font-style: normal;
+      letter-spacing: normal;
+      line-height: normal;
+      //font-family: "Delivery - Regular";
+      border-top: 1px solid rgba(151,151,151, .26);
+
+      @include screen-max(md) {
+        background-size: 25px 25px;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .content-section {
+    justify-content: center;
+    padding-bottom: 80px;
+    border-bottom: 1px solid rgba(151, 151, 151, 0.26);
+
+    .section_needs--image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        @include screen-max(md) {
+          padding-top: 120px;
+          margin-bottom: 45px;
+          max-width: 40%;
+        }
+      }
+    }
+    .container-needs {
+      flex: 0 0 100%;
+
+      .title {
+        font-family: "Delivery Black Condensed";
+        font-size: 40px;
+        font-weight: 900;
+        font-style: normal;
+        letter-spacing: normal;
+        text-transform: uppercase;
+
+        color: #323232;
+        @include screen-max(md) {
+          text-align: center;
+          font-size: 40px;
+          padding: 0;
+          //line-height: 28px;
+        }
+      }
+
+      .subtitle {
+        width: 90%;
+        color: #696969;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 31px;
+        letter-spacing: normal;
+        padding: 25px 25px 25px 40px;
+        @include screen-max(md) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

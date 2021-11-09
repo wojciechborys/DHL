@@ -1,0 +1,20 @@
+.page-template-newsletter-terms{
+  .page-header__title{
+    margin-bottom:1.2em;
+    text-align:center;
+  }
+
+  h2{
+    margin-bottom:24px;
+  }
+
+  ol{
+    > li{
+      margin-bottom:16px;
+    }
+
+    ul > li{
+      margin-bottom:12px;
+    }
+  }
+}

@@ -1,0 +1,97 @@
+.dhl-simple {
+  overflow-x: hidden;
+  &__bg {
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      right: 16px;
+      top: 0;
+      height: calc(100% - 265px);
+      width: 1000vh;
+      background-color: #ffcc00;
+      @include media-breakpoint-only(lg) {
+        height: calc(100% - 300px);
+      }
+      @media screen and(max-width: 362px){
+        height: calc(100% - 300px);
+      }
+    }
+    @include media-breakpoint-down(md) {
+      &:before {
+        right: 0;
+      }
+    }
+  }
+  &__title {
+    color: #000000;
+    font-family: $bold-font-family;
+    font-size: 41px;
+    font-weight: 600;
+    line-height: 48px;
+    text-transform: uppercase;
+    margin: 100px 0 60px;
+    @include media-breakpoint-down(md) {
+      margin: 40px 0 20px;
+      text-align: center;
+      font-size: 32px;
+      line-height: 38px;
+    }
+  }
+  &__box-post {
+    .box-post {
+      &__link {
+        &:hover {
+          text-decoration: none;
+          cursor: pointer;
+        }
+      }
+      &-info {
+        min-height: 265px;
+        padding: 0 30px;
+        &__cat {
+          font-family: $regular-font-family;
+          font-size: 14px;
+          font-weight: 700;
+          line-height: 14px;
+          color: #d6d6d6;
+          margin: 0;
+          padding: 20px 0 5px;
+        }
+        &__title {
+          font-family: $regular-font-family;
+          font-size: 24px;
+          font-weight: 400;
+          line-height: 34px;
+          color: #191919;
+          padding-bottom: 25px;
+        }
+        &__read-more {
+          border-top: 1px solid rgba(#231a13, .16);
+          padding: 20px 0;
+        }
+        &__link {
+          color: #ffcc00;
+          font-family: $regular-font-family;
+          font-size: 14px;
+          font-weight: 700;
+          line-height: 34px;
+          &:hover {
+            text-decoration: none;
+            color: #ffcc00;
+          }
+        }
+      }
+    }
+  }
+}
+
+.dhl-slider-1 {
+  .owl-stage {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .disabled {
+    display: none;
+  }
+}

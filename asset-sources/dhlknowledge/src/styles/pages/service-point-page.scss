@@ -1,0 +1,79 @@
+.service-point-page {
+  @import "taxes/media";
+
+  .section-title-text-brands-service {
+    @extend .section__text-image-service;
+    margin-top: 70px;
+
+    @include screen-max(md) {
+      margin-top: 48px;
+    }
+
+    .brands-service {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        margin: 15px;
+      }
+    }
+
+    border-bottom: none;
+  }
+
+  .section-title-images-service {
+    border-bottom: 1px solid #d5d4d3;
+
+    .items-images-title-service {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-column-gap: 45px;
+      grid-row-gap: 40px;
+      align-items: center;
+      justify-content: center;
+
+      @include screen-max(lg) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      @include screen-max(sm) {
+        grid-row-gap: 32px;
+        grid-column-gap: 32px;
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @include screen-max(xs) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      &__item {
+        height: 100%;
+      }
+
+      &__image {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 20px;
+        align-items: flex-end;
+
+        img {
+          margin-top: auto;
+        }
+      }
+
+      &__title {
+
+      }
+    }
+  }
+
+  .section__text-image-service {
+    margin-top: 70px;
+
+    @include screen-max(md) {
+      margin-top: 48px;
+    }
+  }
+}

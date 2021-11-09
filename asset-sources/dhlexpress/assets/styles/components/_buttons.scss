@@ -1,0 +1,67 @@
+.btn{
+  min-width:184px;
+  text-transform:uppercase;
+
+  @include hover-focus{
+    cursor:pointer;
+  }
+
+  &-secondary{
+    color:$dark-gray;
+  }
+
+  &-alternative {
+    color: white;
+    background-color: #ffcc00;
+  }
+
+  &--wide{
+    width:100%;
+    min-width:auto;
+  }
+
+  &--auto {
+    min-width: auto;
+    padding: {
+      left: 1em;
+      right: 1em;
+    }
+  }
+
+  &--advantage{
+    width:100%;
+    max-width:218px;
+    padding-top:18px;
+    padding-bottom:18px;
+
+    @include media-breakpoint-up(md){
+      min-width:auto;
+    }
+
+    @include media-breakpoint-up(lg){
+      min-width:184px;
+    }
+  }
+
+  &--phone-icon{
+    padding-left:40px;
+    position:relative;
+
+    &:before{
+      width:32px;
+      height:32px;
+      position:absolute;
+        top:12px; bottom:auto;
+        left:14px; right:auto;
+      background:url("../images/icon-phone.png") no-repeat 50% 50%;
+      background-size:cover;
+      content:"";
+    }
+  }
+
+}
+
+.newsletter__btn {
+  min-width: auto;
+  width: 100%;
+}

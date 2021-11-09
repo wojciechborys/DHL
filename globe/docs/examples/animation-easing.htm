@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+<title>Animation Easing</title>
+
+<link rel="stylesheet" href="../../assets/docs.css">
+
+<script src="../../earth.min.js"></script>
+
+<script>
+
+window.addEventListener( "earthjsload", function() {
+
+
+	var myearth = new Earth( "myearth", {
+		location: { lat: -20, lng: 0 },
+		zoom: 0.9
+	} );
+	
+	
+	myearth.addEventListener( "ready", function() {
+		
+		
+		this.addMarker( {
+			location : { lat: 35, lng: 0 },
+			offset: 1,
+			color: 'blue'
+		} ).animate( 'offset', 0, { loop: true, duration: 2000, easing: 'linear' } );
+		
+		this.addOverlay( {
+			content: 'linear',
+			location : { lat: 35, lng: 0 },
+			transform: 'translate(-50%, 1em)',
+			className : 'docs-tip'
+		} );
+		
+		
+		this.addMarker( {
+			location : { lat: 35, lng: -15 },
+			offset: 1,
+		} ).animate( 'offset', 0, { loop: true, duration: 2000, easing: 'out-quad' } );
+		
+		this.addOverlay( {
+			content: 'out-quad',
+			location : { lat: 35, lng: -15 },
+			transform: 'translate(-50%, 1em)',
+			className : 'docs-tip'
+		} );
+
+		
+		this.addMarker( {
+			location : { lat: 35, lng: -30 },
+			offset: 1,
+		} ).animate( 'offset', 0, { loop: true, duration: 2000, easing: 'in-quad' } );		
+		
+		this.addOverlay( {
+			content: 'in-quad',
+			location : { lat: 35, lng: -30 },
+			transform: 'translate(-50%, 1em)',
+			className : 'docs-tip'
+		} );
+		
+		
+		this.addMarker( {
+			location : { lat: 35, lng: -45 },
+			offset: 1,
+		} ).animate( 'offset', 0, { loop: true, duration: 2000, easing: 'in-out-quad' } );	
+		
+		this.addOverlay( {
+			content: 'in-out-quad',
+			location : { lat: 35, lng: -45 },
+			transform: 'translate(-50%, 1em)',
+			className : 'docs-tip'
+		} );
+		
+		
+		this.addMarker( {
+			location : { lat: 35, lng: -60 },
+			offset: 1,
+		} ).animate( 'offset', 0, { loop: true, duration: 2000, easing: 'arc' } );	
+		
+		this.addOverlay( {
+			content: 'arc',
+			location : { lat: 35, lng: -60 },
+			transform: 'translate(-50%, 1em)',
+			className : 'docs-tip'
+		} );
+		
+		
+		
+		this.addMarker( {
+			location : { lat: 35, lng: 15 },
+			offset: 1,
+		} ).animate( 'offset', 0, { loop: true, duration: 2000, easing: 'out-back' } );
+		
+		this.addOverlay( {
+			content: 'out-back',
+			location : { lat: 35, lng: 15 },
+			transform: 'translate(-50%, 1em)',
+			className : 'docs-tip'
+		} );
+
+		
+		this.addMarker( {
+			location : { lat: 35, lng: 30 },
+			offset: 1,
+		} ).animate( 'offset', 0, { loop: true, duration: 2000, easing: 'in-back' } );
+		
+		this.addOverlay( {
+			content: 'in-back',
+			location : { lat: 35, lng: 30 },
+			transform: 'translate(-50%, 1em)',
+			className : 'docs-tip'
+		} );
+		
+		
+		this.addMarker( {
+			location : { lat: 35, lng: 45 },
+			offset: 1,
+		} ).animate( 'offset', 0, { loop: true, duration: 2000, easing: 'bounce' } );
+		
+		this.addOverlay( {
+			content: 'bounce',
+			location : { lat: 35, lng: 45 },
+			transform: 'translate(-50%, 1em)',
+			className : 'docs-tip'
+		} );
+		
+		
+		this.addMarker( {
+			location : { lat: 35, lng: 60 },
+			offset: 1,
+		} ).animate( 'offset', 0, { loop: true, duration: 2000, easing: 'elastic' } );
+		
+		this.addOverlay( {
+			content: 'elastic',
+			location : { lat: 35, lng: 60 },
+			transform: 'translate(-50%, 1em)',
+			className : 'docs-tip'
+		} );
+		
+
+	} );
+	
+	
+} );
+
+</script>
+
+</head>
+<body>
+	<h1>Animation Easing</h1>
+
+	<div id="wrapper">
+	
+		<div id="myearth"></div>
+		
+	</div>
+</body>
+</html>

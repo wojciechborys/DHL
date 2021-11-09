@@ -1,0 +1,114 @@
+.section_5 {
+  padding-top: 45px;
+  padding-bottom: 100px;
+
+  @include screen-max(md) {
+    padding-top: 10px;
+    padding-bottom: 30px;
+  }
+
+  &__title {
+    font-family: "Delivery Black Condensed";
+    font-size: 24px;
+    font-weight: 900;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 27px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 90px;
+
+    @include screen-max(md) {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__left {
+    &-title {
+      text-align: left;
+      line-height: 100%;
+      font-size: 24px;
+      font-weight: 900;
+      color: #212121;
+      font-family: "Delivery Black Condensed";
+    }
+
+    &-item {
+      display: flex;
+      align-items: flex-start;
+
+      &_text {
+        text-align: left;
+      }
+
+      &_icon {
+        min-width: 25px;
+        min-height: 25px;
+        background: url(../images/green_check.png) no-repeat center;
+        color: red;
+      }
+    }
+  }
+
+  &__right {
+    @include screen-max(md) {
+      margin-top: 20px;
+    }
+
+    &-main-wrapper {
+      display: flex;
+    }
+
+    &-mark {
+      /* Style for "Rectangle" */
+      width: 25px;
+      height: 149px;
+      background-color: #d40511;
+    }
+
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+      padding-left: 20px;
+      border-left: 5px solid $brand-primary;
+    }
+
+    &-title {
+      text-align: left;
+      line-height: 100%;
+      font-size: 24px;
+      font-weight: 900;
+      color: #212121;
+      font-family: "Delivery Black Condensed";
+    }
+
+    &-text {
+      text-align: left;
+
+      p {
+        margin-bottom: 24px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &__image {
+      margin-top: 18px;
+
+      @include screen-max(md) {
+        max-width: 80%;
+      }
+    }
+  }
+
+  .taxes-page__list {
+    padding-left: 21px;
+
+    &__item {
+      margin-bottom: 30px;
+      padding-left: 6px;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.career {
+  .banner__list {
+    .menu-item {
+      .nav-link {
+        color: black !important;
+        border-bottom: 2px solid rgba(0, 0, 0, 0);
+        &:hover {
+          border-bottom: 2px solid #d40511;
+        }
+      }
+    }
+  }
+  @media (max-width: 991px) {
+    .banner__navbar-collapse {
+      width: 100%;
+      position: absolute;
+      top: 82px;
+      margin-top: unset;
+    }
+  }
+}

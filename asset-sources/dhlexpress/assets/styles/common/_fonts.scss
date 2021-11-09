@@ -1,0 +1,21 @@
+.font {
+  &__size {
+    &--base {
+      font-size: $font-size-base;
+    }
+
+    &--xxl {
+      font-size: $font-size-xxl !important;
+    }
+
+    &--xl {
+      font-size: $font-size-xl;
+    }
+  }
+
+  &__color {
+    &--white {
+      color: white;
+    }
+  }
+}

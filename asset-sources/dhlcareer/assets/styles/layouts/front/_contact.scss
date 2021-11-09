@@ -1,0 +1,15 @@
+.contact-form{
+  padding-top:70px;
+  padding-bottom:120px;
+
+  &__header{
+    margin-bottom:24px;
+    font-size:1.8125rem;
+    text-align:center;
+
+    @include media-breakpoint-up(md) {
+      margin-bottom:40px;
+      font-size:2rem;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+@import "common/variables";
+// Automatically injected Bower dependencies via wiredep (never manually edit this block)
+// bower:scss
+@import "../../bower_components/bootstrap/scss/bootstrap.scss";
+// endbower
+@import "../../node_modules/owl.carousel/src/scss/owl.carousel.scss";
+@import "../../node_modules/owl.carousel/src/scss/owl.theme.default.scss";
+@import "common/mixins";
+@import "common/global";
+@import "common/fonts";
+@import "components/buttons";
+@import "components/comments";
+@import "components/forms";
+@import "components/grid";
+@import "components/wp-classes";
+@import "components/jquery-ui";
+@import "components/breadcrumbs";
+@import "components/about-dhl";
+@import "components/dhl-simple";
+@import "components/like-others";
+@import "components/directory-form";
+@import "components/sliders";
+@import "components/globe";
+//@import "components/owl";
+// @import "components/contact-form";
+@import "components/iframe-form";
+@import "components/cookie-consent";
+@import "layouts/header";
+@import "layouts/sidebar";
+@import "layouts/footer";
+@import "layouts/pages";
+@import "layouts/posts";
+@import "layouts/tinymce";
+@import "layouts/front/intro";
+@import "layouts/front/calc";
+@import "layouts/front/newsletter";
+@import "layouts/front/shipment";
+@import "layouts/front/numbers";
+@import "layouts/front/articles";
+@import "layouts/front/files";
+@import "layouts/front/disclaimer";
+//ecommerece
+@import "layouts/ecommerce-header";
+
+html{
+  scroll-behavior: smooth;
+}
+body{
+  overflow-x: hidden;
+}

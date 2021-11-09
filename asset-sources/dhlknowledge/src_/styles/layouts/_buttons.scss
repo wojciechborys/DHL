@@ -1,0 +1,112 @@
+.btn {
+	&--red {
+		background: $red;
+		color: $white;
+		padding: 18px 48px 16px;
+		@extend .font__title--06;
+		@include media-breakpoint-up(sm) {
+			height: calc(4rem + 2px);
+		}
+		@include media-breakpoint-down(xs) {
+			padding: 13px 38px;
+			width: 100%;
+		}
+	}
+	&--red-mini {
+		color: $white;
+		@extend .font__title--07;
+		text-transform: uppercase;
+		background: $red;
+		padding: 5px 15px;
+		&:hover {
+			background: $red-hover;
+			color: $white;
+			text-decoration: none;
+		}
+	}
+	&--red-mini2 {
+		color: $white;
+		@extend .font__title--07;
+		text-transform: uppercase;
+		background: $red;
+		height: 50px;
+		padding: 12px 40px;
+		@include media-breakpoint-down(xs) {
+			display: block;
+		}
+		&:hover {
+			background: $red-hover;
+			color: $white;
+			text-decoration: none;
+		}
+	}
+	&-secondary {
+		@include radius(5px);
+		padding: 12px 23px;
+		background: $accordion-border;
+		border-color: $accordion-border;
+		@include media-breakpoint-down(xs) {
+			padding: 8px 13px;
+		}
+		&:active,
+		&.active {
+			background-color: $yellow2!important;
+			border-color: $yellow2!important;
+		}
+		&:hover {
+			cursor: pointner;
+		}
+	}
+	&--yellow {
+		background: $yellow;
+		@include radius(5px);
+		padding: 10px 26px 10px;
+		color: #333333;
+		&-slider {
+			background: $yellow;
+			color: $red;
+			padding: 18px 48px 16px;
+			border: none;
+			border-radius: 0;
+			@extend .font__title--06;
+			@include media-breakpoint-up(sm) {
+				height: calc(4rem + 2px);
+			}
+			@include media-breakpoint-down(xs) {
+				padding: 13px 38px;
+				width: 100%;
+			}
+		}
+	}
+	&--yellow-big {
+		@extend .btn--red;
+		background: $yellow;
+		color: $defaultHeadingColor;
+		&:hover {
+			background: $yellow2;
+			text-decoration: none;
+		}
+	}
+	&--check {
+		background: $yellow;
+		height: calc(4rem + 2px);
+		color: $white;
+		@extend .font__title--06;
+		border-color: $yellow;
+	}
+}
+.form-control {
+	font-size: 18px;
+	@include media-breakpoint-up(sm) {
+		height: calc(4rem + 2px);
+	}
+}
+.more_btn {
+	margin-top: 100px;
+	@include media-breakpoint-down(md) {
+		margin-top: 60px;
+	}
+	@include media-breakpoint-down(xs) {
+		margin-top: 30px;
+	}
+}

@@ -1,0 +1,70 @@
+/* earth container */
+
+.earth-js {
+	position: relative;
+}
+.earth-js::before {
+	content: "";
+	display: block;
+	padding-top: 100%;
+}
+.earth-js > canvas {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+}
+
+
+/* cursors */
+
+.earth-draggable {
+	cursor: all-scroll;
+	cursor: -webkit-grab;
+	cursor: grab;
+}
+.earth-dragging * {
+	cursor: all-scroll;
+	cursor: -webkit-grabbing !important;
+	cursor: grabbing !important;
+}
+.earth-clickable {
+	cursor: pointer;
+}
+
+
+/* overlays */
+
+.earth-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	-webkit-user-select: none;
+	user-select: none;
+	transition: opacity 0.25s ease;
+	transform-origin: bottom center;
+}
+
+.earth-js:not(.earth-ready) .earth-overlay,
+.earth-occluded {
+	opacity: 0;
+	pointer-events: none;
+}
+
+
+/* mapHitTest */
+
+#earth-js-hittest {
+	position: fixed;
+	max-width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 100000;
+}
+#earth-js-hittest svg {
+	max-width: 100%;
+	height: auto;
+	display: block;
+	margin: 0;
+	opacity: 0;
+}

@@ -1,0 +1,33 @@
+.number_section {
+  padding-top: 140px;
+  padding-bottom: 90px;
+  @include media-breakpoint-down(lg) {
+    padding-bottom: 60px;
+  }
+  .number-slide {
+    padding-left: 30px;
+    padding-right: 30px;
+    &__title {
+      font-size: 80px;
+      line-height: 1;
+      color: $red;
+      position: relative;
+      padding-bottom: 18px;
+      &:after {
+        position: absolute;
+        display: block;
+        width: 50px;
+        margin-top: 20px;
+        height: 1px;
+        background: $red;
+        content: '';
+        left: 50%;
+        bottom: 0px;
+        transform: translateX(-50%);
+      }
+    }
+    &__desc {
+
+    }
+  }
+}

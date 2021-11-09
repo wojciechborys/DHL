@@ -1,0 +1,121 @@
+// Colors
+$white:    #fff;
+$gray-100: #f8f9fa;
+$gray-800: #343a40;
+$dark-gray: #323232;
+$black:    #000;
+
+$blue:    #007bff;
+$indigo:  #6610f2;
+$purple:  #6f42c1;
+$pink:    #e83e8c;
+$red:     #dc3545;
+$orange:  #fd7e14;
+$yellow:  #ffc107;
+$green:   #28a745;
+$teal:    #20c997;
+$cyan:    #17a2b8;
+
+$brand-primary:   #d40511;
+$brand-secondary: #ffcc00;
+
+$theme-colors: (
+  primary: $brand-primary,
+  secondary: $brand-secondary,
+  success: $green,
+  info: $cyan,
+  warning: $yellow,
+  danger: $red,
+  light: #f2f2f2,
+  dark: $gray-800
+);
+
+// Grid settings
+$main-sm-columns:       12;
+$sidebar-sm-columns:    4;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1170px,
+  xxl:1440px,
+);
+
+// Fonts
+// Fonts
+//$regular-font-family: "Frutiger Neue LT W06 Regular", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+//$bold-font-family:    "Frutiger Neue LT W06 Bold", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+//$demi-font-family:    "Frutiger Neue LT W06 Co1366734", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+$regular-font-family: "Delivery Regular";
+$demi-font-family: "Delivery Black Condensed";
+//$lightFont: "Delivery Light";
+$bold-font-family: "Delivery Bold";
+
+$font-family-sans-serif: $regular-font-family;
+
+// $headings-margin-bottom: ($spacer / 2);
+$headings-font-family:   $demi-font-family;
+$headings-font-weight:   400;
+$headings-line-height:   1.1;
+$headings-color:         #323232;
+
+$font-size-h1: 2.2rem;
+$font-size-h2: 2rem;
+
+$font-size-base: 1rem;
+$font-size-lg:   1.25rem;
+$font-size-sm:   .875rem;
+$font-size-xs:   .75rem;
+
+$line-height-base: 1.5;
+$line-height-computed: floor(($font-size-base * $line-height-base));
+$line-height-lg:   (4 / 3);
+$line-height-sm:   1.5;
+
+// Forms
+$input-border-radius:    0;
+$input-border-radius-lg: 0;
+$input-border-radius-sm: 0;
+
+$input-font-size: .8125rem;
+
+$input-color:             #5d5b5b;
+$input-placeholder-color: #b4b4b4;
+$input-btn-padding-x: .875rem;
+$input-btn-padding-y: 1.25rem;
+
+$input-line-height: 1.2;
+/*
+$input-height:    (($font-size-base * $line-height-base) + ($input-padding-y * 2));
+$input-height-lg: (($font-size-lg * $line-height-lg) + ($input-padding-y-lg * 2));
+$input-height-sm: (($font-size-sm * $line-height-sm) + ($input-padding-y-sm * 2));
+
+$input-height-base: ($line-height-computed + ($input-padding-y-sm * 2) + 2);
+$input-height-large: $input-height-lg;
+$input-height-small: $input-height-sm;
+*/
+// Buttons
+$btn-secondary-color: #000;
+$btn-secondary-bg: $brand-secondary;
+$btn-secondary-border: $brand-secondary;
+
+$navbar-border-radius:0;
+$navbar-dark-color:   map-get($theme-colors, primary);
+$navbar-dark-hover-color: #000;
+$btn-border-radius:   0;
+
+// Tooltips
+$tooltip-max-width:           380px;
+$tooltip-color:               $dark-gray;
+$tooltip-bg:                  $brand-secondary;
+$tooltip-padding-y:           4px;
+$tooltip-padding-x:           4px;
+
+// Popovers
+$popover-bg:                  $brand-secondary;
+$popover-max-width:           200px;
+$popover-border-width:        0;
+
+$popover-body-color:          $dark-gray;

@@ -1,0 +1,31 @@
+//@import "settings/bootstrap.custom"
+//@import "generic/grid"
+
+//@import "generic/reboot"
+//@import "generic/fonts"
+
+@import "variables";
+@import "~bootstrap/scss/bootstrap";
+@import "~slick-carousel/slick/slick";
+@import "generic/mixins";
+
+@import "global";
+@import "fonts";
+
+@import "layouts/header";
+@import "layouts/buttons";
+@import "layouts/forms";
+@import "layouts/navbar";
+@import "layouts/newsletter";
+@import "layouts/sections";
+@import "layouts/paginate";
+
+@import "layouts/contact";
+@import "layouts/knowledge";
+@import "layouts/article";
+@import "layouts/calc";
+@import "layouts/iframe-form";
+@import "layouts/popup";
+@import "layouts/media-about";
+//pages
+@import "pages/reusable/index";

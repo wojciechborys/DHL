@@ -1,0 +1,107 @@
+.section_10 {
+  padding-top: 60px;
+  padding-bottom: 50px;
+
+  @include screen-max(md) {
+    padding-top: 30px;
+    padding-bottom: 0;
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 37px;
+
+    @include screen-max(md) {
+      margin-bottom: 0;
+    }
+  }
+
+  .container-taxes {
+    padding-bottom: 90px;
+
+    @include screen-max(md) {
+      padding-bottom: 30px;
+      border-bottom: none !important;
+    }
+  }
+
+  &__left {
+    img {
+      @include screen-max(md) {
+        margin-bottom: 45px;
+        max-width: 80%;
+      }
+    }
+
+    &-title {
+      text-align: left;
+      line-height: 100%;
+      font-family: "Delivery Black Condensed";
+      font-size: 24px;
+      font-weight: 900;
+    }
+  }
+
+  .taxes-page__list {
+    padding-left: 21px;
+
+    &__item {
+      margin-bottom: 30px;
+      padding-left: 6px;
+    }
+
+    &.list {
+      .taxes-page__list {
+        &__item {
+          list-style: none;
+        }
+      }
+    }
+  }
+
+  &__right {
+    &-wrapper {
+      display: flex;
+      flex-direction: column;
+      padding-left: 20px;
+      border-left: 5px solid $brand-primary;
+    }
+
+    &-title {
+      text-align: left;
+      line-height: 100%;
+      font-family: "Delivery Black Condensed";
+      font-size: 24px;
+      font-weight: 900;
+    }
+
+    &-text {
+      text-align: left;
+
+      p {
+        margin-bottom: 24px;
+
+        &:last-child {
+          margin-bottom: 0 !important;
+        }
+      }
+    }
+  }
+
+  &__file {
+    margin: 90px 0;
+
+    @include screen-max(md) {
+      margin: 20px 0 30px;
+    }
+  }
+
+  &__misc {
+    color: #a4a4a4;
+    font-family: "Delivery Regular";
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: normal;
+    line-height: 23px;
+  }
+}

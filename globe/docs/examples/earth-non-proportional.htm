@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+<title>Fullscreen / Non-Proportional Container</title>
+
+<link rel="stylesheet" href="../../assets/docs.css">
+
+<style>
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+#myearth {
+	width: 100%;
+	height: 100vh;
+}
+#myearth::before {
+	content: none;
+}
+
+</style>
+
+<script src="../../earth.min.js"></script>
+
+<script>
+
+window.addEventListener( "earthjsload", function() {
+
+	var myearth = new Earth( "myearth", {
+		location: { lat: 20, lng: 0 },
+		autoRotate: true
+	} );
+	
+	myearth.addEventListener( "ready", function() {
+		for ( var i = 0; i < 9; i++ ) {
+			this.addMarker( {
+				mesh : "Diamond",
+				location : { lat: -45 + i * 10 , lng: -180 + i * 45 },
+				offset : i
+			} );
+		}
+	} );
+	
+} );
+
+</script>
+
+</head>
+<body>
+
+	<h1 style="position: absolute; top: 0; left: 0; right: 0; z-index: 100">Fullscreen / Non-Proportional Container</h1>
+
+	<div id="myearth"></div>
+	
+</body>
+</html>

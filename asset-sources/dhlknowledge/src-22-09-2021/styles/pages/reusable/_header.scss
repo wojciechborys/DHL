@@ -1,0 +1,72 @@
+.reusable {
+  &__header-top {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 80vh;
+    @include media-breakpoint-down(md) {
+      text-align: center;
+    }
+
+    &__desc {
+      h1 {
+        @extend .font__title--01;
+      }
+
+      h2 {
+        @extend .font__title--02;
+      }
+
+      h3 {
+        @extend .font__title--03;
+      }
+
+      h4 {
+        @extend .font__title--04;
+      }
+
+      h5 {
+        @extend .font__title--05;
+      }
+
+      h6 {
+        @extend .font__title--06;
+      }
+
+      p, span {
+        @extend .font__subtitle--00022;
+      }
+
+      ul {
+        list-style-type: none;
+        padding-left: 25px;
+        text-align: left;
+
+        li {
+          position: relative;
+          @extend .font__subtitle--00022;
+          line-height: 39px;
+
+          &:after {
+            content: "";
+            position: absolute;
+            left: -25px;
+            top: 15px;
+            width: 14px;
+            height: 10px;
+            background-image: url("../images/ok.png");
+            background-size: cover;
+            background-position: center;
+          }
+        }
+      }
+    }
+
+    &__banner {
+      padding-top: 220px;
+      @include media-breakpoint-down(md) {
+        padding-top: 120px;
+      }
+    }
+  }
+}

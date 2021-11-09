@@ -1,0 +1,327 @@
+body {
+  color: $defaultFontColor;
+  font-family: $defaultFont;
+  font-size: $defaultFontSize;
+}
+
+.font {
+  &__title {
+    &--01 {
+      font-family: $boldFont; //Frutiger LT Pro - Black Cn
+      font-size: 49px;
+      line-height: 57px;
+      text-transform: uppercase;
+      @include media-breakpoint-down(lg) {
+        font-size: 44px;
+        line-height: 52px;
+      }
+      @include media-breakpoint-down(xs) {
+        font-size: 32px;
+        line-height: 40px;
+      }
+    }
+
+    &--02 {
+      font-family: $boldFont; //Frutiger LT Pro - Black Cn
+      font-size: 47px;
+      line-height: 45.3px;
+      @include media-breakpoint-down(lg) {
+        font-size: 42px;
+      }
+      @include media-breakpoint-down(xs) {
+        font-size: 38px;
+      }
+    }
+
+    &--022 {
+      font-family: $boldFont;
+      font-size: 39px;
+      line-height: 48px;
+      @include media-breakpoint-down(lg) {
+        font-size: 34px;
+        line-height: 42px;
+      }
+      @include media-breakpoint-down(xs) {
+        font-size: 30px;
+        line-height: 42px;
+      }
+    }
+
+    &--03 {
+      font-family: $boldFont; //Frutiger LT Pro - Black Cn
+      font-size: 36px;
+      line-height: 44px;
+      @include media-breakpoint-down(lg) {
+        font-size: 32px;
+      }
+    }
+
+    &--3 {
+      font-family: $defaultBoldFont;
+      font-size: 36px;
+      line-height: 44px;
+      @include media-breakpoint-down(lg) {
+        font-size: 32px;
+      }
+    }
+
+    &--033 {
+      font-family: $defaultBoldFont;
+      font-size: 35px;
+      line-height: 46px;
+
+      a {
+        color: inherit;
+      }
+
+      @include media-breakpoint-down(lg) {
+        font-size: 27px;
+      }
+    }
+
+    &--04 {
+      font-family: $boldFont; //Frutiger LT Pro - Black Cn
+      font-size: 24px;
+      line-height: 29px;
+      text-transform: uppercase;
+      @include media-breakpoint-down(lg) {
+        font-size: 19px;
+      }
+      @include media-breakpoint-down(xs) {
+        font-size: 16px;
+      }
+    }
+
+    &--4 {
+      font-family: $defaultBoldFont; //Frutiger LT Pro - Black Cn
+      font-size: 24px;
+      line-height: 28px;
+      text-transform: uppercase;
+      @include media-breakpoint-down(lg) {
+        font-size: 19px;
+      }
+    }
+
+    &--05 {
+      font-family: $boldFont; //Frutiger LT Pro - Black Cn
+      font-size: 24px;
+      line-height: 29px;
+      text-transform: uppercase;
+      @include media-breakpoint-down(lg) {
+        font-size: 19px;
+      }
+    }
+
+    &--055 {
+      font-family: $boldFont; //Frutiger LT Pro - Black Cn
+      font-size: 22px;
+      line-height: 29px;
+      text-transform: uppercase;
+      @include media-breakpoint-down(lg) {
+        font-size: 19px;
+      }
+    }
+
+    &--0555 {
+      font-family: $boldFont; //Frutiger LT Pro - Black Cn
+      font-size: 20px;
+      line-height: 26px;
+      text-transform: uppercase;
+      @include media-breakpoint-down(lg) {
+        font-size: 19px;
+      }
+    }
+
+    &--06 {
+      font-family: $defaultBoldFont; //Frutiger LT Pro - Black Cn
+      font-size: 18px;
+      @include media-breakpoint-down(xs) {
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      &--1 {
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+
+    &--07 {
+      font-family: $defaultBoldFont; //Frutiger LT Pro - Black Cn
+      font-size: 16px;
+      @include media-breakpoint-down(lg) {
+        font-size: 15px;
+      }
+    }
+  }
+
+  &__subtitle {
+    &--01 {
+      font-family: $defaultFont;
+      font-size: 28px;
+      font-weight: 400;
+      line-height: 28px;
+    }
+
+    &--011 {
+      font-family: $defaultFont;
+      font-size: 24px;
+      line-height: 28px;
+      a{
+        color: inherit;
+      }
+      @include media-breakpoint-down(lg) {
+        font-size: 19px;
+      }
+    }
+
+    &--02 {
+      font-family: $defaultFont;
+      font-size: 20px;
+      line-height: 26px;
+      @include media-breakpoint-down(lg) {
+        font-size: 18px;
+      }
+    }
+
+    &--022 {
+      font-family: $defaultFont;
+      font-size: 19px;
+      line-height: 30px;
+      @include media-breakpoint-down(sm) {
+        font-size: 16px;
+        line-height: 26px;
+      }
+      @include media-breakpoint-down(xs) {
+        font-size: 14px;
+        line-height: 26px;
+      }
+    }
+
+    &--0222 {
+      font-family: $defaultFont;
+      font-size: 18px;
+      line-height: 28px;
+      @include media-breakpoint-down(lg) {
+        font-size: 16px;
+        line-height: 26px;
+      }
+    }
+
+    &--0002 {
+      font-family: $defaultFont;
+      font-size: 18px;
+      line-height: 23px;
+      @include media-breakpoint-down(lg) {
+        font-size: 16px;
+      }
+    }
+
+    &--00022 {
+      font-family: $defaultFont;
+      font-size: 18px;
+      line-height: 31px;
+      @include media-breakpoint-down(lg) {
+        font-size: 16px;
+        line-height: 23px;
+      }
+    }
+
+    &--2222 {
+      font-family: $defaultFont;
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    &--16 {
+      font-size: 16px;
+      line-height: 30px;
+      @include media-breakpoint-down(xs) {
+        line-height: 24px;
+      }
+    }
+
+    &--16-2 {
+      font-size: 16px;
+      line-height: 23px;
+      @include media-breakpoint-down(xs) {
+        line-height: 20px;
+      }
+    }
+
+    &--16-3 {
+      font-size: 16px;
+      line-height: 26px;
+      @include media-breakpoint-down(xs) {
+        line-height: 20px;
+      }
+    }
+
+    &--3 {
+      font-size: 15px;
+      line-height: 40px;
+    }
+
+    &--03 {
+      font-family: $defaultFont;
+      font-size: 13px;
+      line-height: 20px;
+    }
+
+    &--05 {
+      font-family: $defaultFont;
+      font-size: 10px;
+      line-height: 16px;
+    }
+  }
+
+  &__lh {
+    &--53 {
+      line-height: 53px;
+    }
+  }
+
+  &__bold {
+    font-family: $defaultBoldFont;
+  }
+
+  &__color {
+    &--default {
+      color: $defaultFontColor;
+    }
+
+    &--default-head {
+      color: $defaultHeadingColor;
+    }
+
+    &--white {
+      color: $white;
+    }
+
+    &--gray {
+      color: $gray;
+    }
+
+    &--red {
+      color: $red;
+    }
+    &--red2 {
+      color: $red2;
+    }
+    &--gray2 {
+      color: $gray2;
+    }
+
+    &--yellow {
+      color: $yellow;
+    }
+
+    &--dark-gray {
+      color: $dark-gray;
+    }
+
+    &--green {
+      color: $green;
+    }
+  }
+}

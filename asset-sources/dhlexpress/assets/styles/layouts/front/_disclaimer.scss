@@ -1,0 +1,29 @@
+.disclaimer-section{
+  padding-top:68px;
+  padding-bottom:76px;
+  background-color:#f2f2f2;
+
+  &__header{
+    color:#a8afb9;
+
+    &--top{
+      font-size:1.25rem;
+    }
+
+    &--subheader{
+      font-size:1rem;
+    }
+  }
+
+  &__text{
+    margin-bottom:18px;
+    color:#a8afb9;
+    font-size:.75rem;
+  }
+
+  a{
+    color:inherit;
+    text-decoration:underline;
+  }
+
+}

@@ -1,0 +1,1 @@
+{"version":3,"sources":["../assets/styles/admin-post.scss"],"names":[],"mappings":"AAAA,UACE,eAAc,AACd,YAAW,AACX,mBAAkB,AAClB,cAAa,AACb,cAAc,CACf","file":"admin-post.css","sourcesContent":[".ap-image{\r\n  max-width:100%;\r\n  height:auto;\r\n  margin-bottom:1rem;\r\n  display:block;\r\n  cursor:pointer;\r\n}\r\n"],"sourceRoot":"assets/styles/"}

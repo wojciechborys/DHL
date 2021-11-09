@@ -1,0 +1,136 @@
+.content-intro{
+  //margin-top: -112px;
+  //padding-top:60px;
+  position: relative;
+  overflow: hidden;
+
+  @include media-breakpoint-up(md){
+    padding-top:0;
+  }
+
+  &__background {
+    position: relative;
+    width: 100%;
+    min-height: 690px;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: auto;
+      object-position: right;
+      position: absolute;
+
+      @include media-breakpoint-down(lg){
+        width: auto;
+        height: 100%;
+      }
+    }
+  }
+
+  &__container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    @include media-breakpoint-down(md){
+      align-items: flex-start;
+      padding-top: 5rem;
+    }
+  }
+
+  &__header{
+    margin-bottom:16px;
+    font-size:3.0625rem;
+    text-transform:uppercase;
+
+    @include media-breakpoint-up(md){
+      font-size:2.875rem;
+    }
+
+    @include media-breakpoint-up(lg){
+      font-size:3.0625rem;
+    }
+
+  }
+
+  &__info{
+    margin-bottom:26px;
+    font-size:1.1875rem;
+
+    @include media-breakpoint-up(md){
+      margin-bottom:40px;
+    }
+  }
+
+  &__btn-wrapper{
+    margin-bottom:66px;
+
+    @include media-breakpoint-up(md){
+      margin-bottom:140px;
+    }
+
+    @include media-breakpoint-up(lg){
+      margin-bottom:160px;
+    }
+
+    @include media-breakpoint-up(xl){
+      margin-bottom:180px;
+    }
+  }
+}
+
+.tracking-form {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  min-height: 168px;
+  height: 168px;
+  background: rgba(0,0,0,0.65);
+  color: white;
+
+  @include media-breakpoint-down(lg){
+    min-height: auto;
+    padding: 2rem 0 4rem;
+    height: auto;
+  }
+
+  @include media-breakpoint-down(sm){
+    padding-top: 1rem;
+  }
+
+  .form-control {
+    font-size: $font-size-base;
+
+    &::placeholder {
+      font-style: italic;
+    }
+  }
+
+  .readdress {
+    position: absolute;
+    width: 100%;
+    bottom: -2rem;
+    left: 0;
+    display: flex;
+    justify-content: center;
+
+    @include media-breakpoint-down(md){
+      bottom: -3.5rem;
+      text-align: center;
+    }
+
+    @include media-breakpoint-down(sm){
+      bottom: -2.5rem;
+      //text-align: center;
+    }
+
+    &:hover {
+      color: white;
+    }
+  }
+}

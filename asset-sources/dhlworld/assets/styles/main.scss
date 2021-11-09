@@ -1,0 +1,32 @@
+@import "common/variables";
+
+// Automatically injected Bower dependencies via wiredep (never manually edit this block)
+// bower:scss
+@import "../../bower_components/bootstrap/scss/bootstrap.scss";
+// endbower
+@import "../../bower_components/owl.carousel/src/scss/owl.carousel.scss";
+
+@import "common/global";
+@import "components/buttons";
+@import "components/comments";
+@import "components/main-slider";
+@import "components/newsletter";
+@import "components/sticky-button";
+@import "components/widgets";
+@import "components/share-buttons";
+@import "components/tags";
+@import "components/likes";
+@import "components/article-box";
+@import "components/header";
+@import "components/forms";
+@import "components/grid";
+@import "components/cookie-consent";
+@import "components/wp-classes";
+
+@import "layouts/errorpage";
+@import "layouts/header";
+@import "layouts/sidebar";
+@import "layouts/footer";
+@import "layouts/pages";
+@import "layouts/posts";
+@import "layouts/tinymce";

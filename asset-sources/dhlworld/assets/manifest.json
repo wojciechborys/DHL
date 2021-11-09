@@ -1,0 +1,41 @@
+{
+  "dependencies": {
+    "main.js": {
+      "files": [
+        "scripts/fixed-navbar.js",
+        "scripts/main.js"
+      ],
+      "main": true
+    },
+    "main.css": {
+      "files": [
+        "styles/main.scss"
+      ],
+      "main": true
+    },
+    "admin-post.css": {
+      "files": [
+        "styles/admin-post.scss"
+      ]
+    },
+    "customizer.js": {
+      "files": [
+        "scripts/customizer.js"
+      ]
+    },
+    "admin-post.js": {
+        "files": [
+            "scripts/admin-post.js"
+        ]
+    },
+    "jquery.js": {
+      "bower": ["jquery"]
+    },
+    "owl.carousel.js": {
+      "bower": ["owl.carousel"]
+    }
+  },
+  "config": {
+    "devUrl": "http://dhl.local/swiat/"
+  }
+}

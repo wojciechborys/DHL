@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+<title>Asynchronous Load</title>
+
+<link rel="stylesheet" href="../../assets/docs.css">
+
+<script>
+
+/* load earth.js after the page is loaded. */
+
+window.addEventListener( 'load', function() {
+	var script = document.createElement( "script" );
+	script.src = "../../earth.min.js";
+	document.body.appendChild( script );	
+} );
+
+
+window.addEventListener( "earthjsload", function() {
+
+	var myearth = new Earth( "myearth", {
+		location: { lat: 10, lng: -80 },
+	} );
+	
+} );
+
+</script>
+
+</head>
+<body>
+	<h1>Asynchronous Load</h1>
+	
+	<div id="wrapper">		
+
+		<div id="myearth"></div>		
+	
+	</div>
+</body>
+</html>

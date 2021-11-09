@@ -1,0 +1,53 @@
+.about-dhl {
+  &__slider {
+    .owl-stage {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: hidden;
+      .owl-item {
+        opacity: .5;
+        &.active {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.like-others {
+  overflow-x: hidden;
+  &__mobile-carousel {
+    .owl-stage {
+      display: flex;
+      flex-wrap: nowrap;
+      .owl-item {
+        opacity: .5;
+        &.active {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.owl-nav {
+  button {
+    width: 51px;
+    border: 0;
+    outline: 0;
+    @include media-breakpoint-down(md) {
+      width: 130px;
+    }
+    height: 51px;
+    background-color: #000000;
+    &:focus {
+      outline: none;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &.disabled {
+    display: none;
+  }
+}

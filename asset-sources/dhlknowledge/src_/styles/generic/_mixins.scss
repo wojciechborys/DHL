@@ -1,0 +1,34 @@
+@mixin radius($radius: 0) {
+    border-radius: $radius;
+}
+
+@mixin animated($ms: $baseAnimationDuration, $ease: ease-in-out) {
+    transition: all $ms $ease;
+}
+
+@mixin shadow($box-shadow) {
+    box-shadow: $box-shadow;
+}
+
+@mixin animation($prop: all, $duration: 0.3s, $easing: ease-in-out) {
+  -webkit-transition: $prop $duration $easing;
+  -moz-transition: $prop $duration $easing;
+  -ms-transition: $prop $duration $easing;
+  -o-transition: $prop $duration $easing;
+  transition: $prop $duration $easing;
+}
+
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}
+}
+
+@mixin rotate($deg) {
+	-webkit-transform: rotate($deg);
+	-moz-transform: rotate($deg);
+	-o-transform: rotate($deg);
+	-ms-transform: rotate($deg);
+	transform: rotate($deg);
+}

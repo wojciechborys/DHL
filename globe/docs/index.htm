@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+<title>Miniature Earth Manual</title>
+
+<link rel="stylesheet" href="../assets/docs.css">
+
+</head>
+<body>
+	<div id="wrapper">
+		
+		<h1>Miniature Earth v1.0</h1>
+	
+		<div id="docs-index">
+			
+			<div class="docs-col">
+				<h2>API Reference</h2>
+				<ul>
+					<li><a href="api/earth.htm">Earth</a></li>
+					<li><a href="api/marker.htm">Marker</a></li>
+					<li><a href="api/line.htm">Line</a></li>
+					<li><a href="api/overlay.htm">Overlay</a></li>
+					<li><a href="api/animation.htm">Animation</a></li>
+				</ul>
+			</div>
+		
+			<div class="docs-col">
+				<h2>Examples</h2>
+				<ul>
+					<li><a href="examples/map-styles.htm">Map Styles</a></li>
+					<li><a href="examples/earth-light.htm">Light Types</a></li>
+					<li><a href="examples/earth-get-location.htm">Get Location</a></li>
+					<li><a href="examples/earth-navigation.htm">Navigation</a></li>
+					<li><a href="examples/marker-default-meshes.htm">Default Markers</a></li>
+					<li><a href="examples/marker-properties.htm">Marker Properties</a></li>
+					<li><a href="examples/line-properties.htm">Line Properties</a></li>
+					<li><a href="examples/overlay-properties.htm">Overlay Properties</a></li>
+					<li><a href="examples/animatable-properties.htm">Animatable Properties</a></li>
+				</ul>
+			</div>
+			
+			<div class="docs-col">
+				<h2>Advanced</h2>
+				<ul>
+					<li><a href="examples/earth-asynchronous.htm">Asynchronous Load</a></li>
+					<li><a href="examples/earth-preload-fallback.htm">Preload &amp; Fallback</a></li>
+					<li><a href="examples/earth-legacy-support-ie11.htm">Legacy Support (IE 11)</a></li>
+					<li><a href="examples/earth-non-proportional.htm">Fullscreen / Non-Proportional</a></li>
+					<li><a href="examples/animation-easing.htm">Animation Easing</a></li>
+					<li><a href="examples/marker-custom-meshes.htm">Custom Markers</a></li>
+					<li><a href="examples/map-texture-draw.htm">Texture Draw</a></li>
+					<li><a href="examples/map-custom-svg.htm">Custom Map SVG</a></li>
+					<li><a href="examples/earth-capture-image.htm">Capture Image</a></li>
+				</ul>
+			</div>
+		
+		</div><!--docs-index-->
+		
+		<div id="docs">
+		
+			<h2>Choosing earth.min.js or earth.core.min.js</h2>
+			<p><em>earth.min.js</em> bundles everything you need to start in one file.</p>
+			
+			<p><em>earth.core.min.js</em> is a stripped down version without:<br>
+			- SVG Map: You need to provide a <a href="examples/map-texture-draw.htm">texture</a> or use a <a href="examples/map-custom-svg.htm">custom SVG</a>.<br>
+			- Default Markers: You can use <a href="examples/marker-custom-meshes.htm">custom markers</a>.<br>
+			- CSS Styles: You need to load <em>src/earth.css</em> manually.
+			</p>
+
+			<h2>Gzip compression</h2>
+			<p>Enable gzip compression on your web server to reduce the filesize of earth.min.js to about 260KB.</p>
+			
+			<h2>Asynchronous Loading</h2>
+			<p>It is recommended to load the script <a href="examples/earth-asynchronous.htm">asychronously</a>. You can integrate a <a href="examples/earth-preload-fallback.htm">loading animation and fallback content</a>.</p>			
+
+			<h2>Legacy Support (IE11)</h2>
+			<p>Internet Explorer 11 is not supported by default and will show your fallback content. You can <a href="examples/earth-legacy-support-ie11.htm">enable limited support for IE11</a>.<br>
+			IE11 doesn't support:<br>
+			- SVG Maps: You need to use a texture as map or provide a fallback texture.<br>
+			- <a href="api/earth.htm#maphittest">Earth.mapHitTest</a></p>
+			
+			<h2>Get LatLng Geo Coordinates</h2>
+			<p>You can use your favorite map service to get the lat/lng geo coordinates for a specific address.</p>
+			
+<code><pre>Google Maps Example: You can get lat/lng coordinates directly from the address bar of your browser:
+https://www.google.com/maps/place/New+York+City,+USA/@<strong>40.6918636</strong>,<strong>-74.0965785</strong>,11.25z/data=...
+=>  <strong>{ lat: 40.6918636, lng: -74.0965785 }</strong>
+</pre></code>
+			
+			<h2 id="obj">Using .obj 3d files as custom markers</h2>
+			<p>Save your mesh as Wavefront (.obj) file in an uncompressed text format.<br>
+			- Apply modifiers, triangulate faces<br>
+			- Only meshes are supported, all other features are ignored (like materials, UVs, ...)<br>
+			- The file can contain multiple objects/meshes at top level<br>
+			- The object/mesh names should only consist of letters and numbers<br>
+			- Your file should look like this:</p>
+<code><pre>o MyMesh
+v 0.625 0.0 0.0
+v 0.562 0.108 0.0
+...
+f 7 2 1
+f 2 9 3
+...
+</pre></code>
+			<p><a href="examples/marker-custom-meshes.htm">Example (Custom Markers)</a></p>
+			
+		</div><!--docs-->
+		
+	</div>
+</body>
+</html>

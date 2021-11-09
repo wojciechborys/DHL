@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,SAAS;EACP,SAAS,EAAC,IAAI;EACd,MAAM,EAAC,IAAI;EACX,aAAa,EAAC,IAAI;EAClB,OAAO,EAAC,KAAK;EACb,MAAM,EAAC,OAAO",
+"sources": ["admin-post.scss"],
+"names": [],
+"file": "admin-post.css"
+}

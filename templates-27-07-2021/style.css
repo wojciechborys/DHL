@@ -1,0 +1,34 @@
+.ixp-text h1 {
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.ixp-text {
+    padding: 0 !important;
+    font-size: 18px;
+}
+
+.ixp-container .ixp-grid-row:first-of-type {
+    margin-bottom: 50px;
+}
+
+.ixp-component-form-style-brand-brand .ixp-component-textbox-inherit .ixp-component-textbox-input {
+    border-color: #c5c5c5 !important;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 22px;
+}
+
+.ixp-component-form-style-brand-brand .ixp-component-textbox-inherit .ixp-component-textbox-input::placeholder {
+    color: #c5c5c5 !important;
+}
+
+.ixp-component-form-style-brand-brand .ixp-component-form-field .ixp-input.ixp-input-validation-valid input {
+    border-color: #f1ce31 !important;
+}
+
+.ixp-component-form-style-brand-brand .ixp-component-form-field .ixp-input.ixp-input-validation-valid .ixp-component-textbox-input-wrap::after {
+    background: #f1ce31 !important;
+    bottom: 18px;
+    right: 13px;
+}

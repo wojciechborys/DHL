@@ -1,0 +1,21 @@
+.page-content{
+  &--404{
+    p{
+      margin-bottom:24px;
+      color:#666;
+      font-size:1.125rem;
+    }
+  }
+
+  &__homepage-link{
+    color:#111;
+    font-family:$bold-font-family;
+    font-size:.875rem;
+    text-decoration:underline;
+
+    @include hover-focus{
+      color:#111;
+      text-decoration:none;
+    }
+  }
+}

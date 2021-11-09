@@ -1,0 +1,315 @@
+.content-info{
+  position:relative;
+  background-color:theme-color(secondary);
+  z-index:0;
+
+/*  &:after{
+    width:100%;
+    height:95px;
+    margin:0 auto;
+    display:block;
+    background:url("../images/bg-plane-footer.png") no-repeat 0 0;
+    position:absolute;
+      top:-70px; bottom:auto;
+      left:0; right:0;
+    z-index:0;
+    content:"";
+
+    @include make-container-max-widths();
+  }*/
+
+  &__container{
+    padding-top:30px;
+    padding-bottom:38px;
+  }
+
+  &__service-name{
+    margin:0;
+    color:theme-color(primary);
+    font-size:14px;
+    font-weight:600;
+    line-height:20px;
+    text-align:center;
+    z-index:1;
+  }
+
+  &__linkedin-link{
+    width:44px;
+    height:0;
+    padding-top:44px;
+    border-radius:22px;
+    position:relative;
+    background:$white url("../images/socials-linkedin.png") no-repeat 50% 50%;
+    display:inline-block;
+    font-size:0;
+    vertical-align:middle;
+    margin-top: 0;
+
+    @include media-breakpoint-up(lg){
+      margin-top:20px;
+      margin-bottom:20px;
+    }
+  }
+
+  &__name-info{
+    height:44px;
+    display:inline-block;
+    vertical-align:middle;
+    line-height:44px;
+  }
+  .footer-copyrights{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    margin-top:30px;
+    margin-bottom: 30px;
+
+    @include media-breakpoint-up(lg){
+      text-align:left;
+      margin-bottom: 0;
+      margin-top: 0;
+      p{
+        width:100%;
+      }
+    }
+
+    p{
+      font-size: 13px;
+      padding-top: 14px;
+      padding-bottom: 10px;
+      line-height: 18px;
+      margin: 0;
+    }
+  }
+}
+
+
+.mm-nav{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-top:30px;
+  margin-bottom: 20px;
+
+  @include media-breakpoint-up(lg){
+    margin-top: 0;
+    margin-bottom: 0;
+    justify-content:left;
+
+    .widget_nav_menu{
+      width:100%;
+    }
+  }
+
+  ul{
+    padding:0;
+    overflow: hidden;
+    margin-bottom: 0;
+    list-type-style:none;
+    display:inline-block;
+
+    .menu-item{
+      margin-left:10px;
+      margin-right:10px;
+      position:relative;
+      display:block;
+      float:left;
+      font-size:13px;
+
+      @include media-breakpoint-up(lg){
+        &:last-child{
+          margin-right:0;
+
+          a{
+            padding-right:0;
+          }
+        }
+      }
+
+      a{
+        padding:12px;
+        padding-top:13px;
+        padding-bottom:11px;
+        line-height:18px;
+      }
+
+      &:after{
+        width:1px;
+        height:13px;
+        display:block;
+        background:$brand-primary;
+        position:absolute;
+          top:4px;
+          right:-10px;
+        content: '';
+      }
+
+      &:last-child{
+        &:after{
+          display:none;
+        }
+      }
+
+    }
+  }
+
+}
+
+.mm-main-footer{
+    text-align:center;
+    padding-top:16px;
+    padding-bottom:16px;
+
+    background: $brand-secondary;
+
+    &__info{
+        p{
+            border-top: 1px solid rgba(0,0,0,0.1);
+            color:#666;
+            padding:19px 30px 42px 30px;
+            font-size:12px;
+        }
+    }
+    &__container{
+        clear:both;
+    }
+
+    p{
+        font-size:13px;
+        padding-top: 14px;
+        padding-bottom: 10px;
+        line-height: 18px;
+        margin:0;
+    }
+    // footer nav
+    .mm-nav{
+
+        @include media-breakpoint-up(lg) {
+
+          ul{
+            float:right;
+          }
+        }
+
+        padding-left:0;
+
+        &__item{
+            position:relative;
+            font-size:13px;
+            margin-right:10px;
+            margin-left:10px;
+            a{
+                padding-top:13px;
+                padding-bottom:11px;
+                line-height: 18px;
+            }
+            &:after{
+                content: '';
+                display:block;
+                width:1px;
+                height: 13px;
+                position:absolute;
+                background:$brand-primary;
+                right:-10px;
+                top:17px;
+            }
+
+            &:last-child{
+                &:after{
+                    display:none;
+                }
+            }
+
+        }
+    }
+
+    @include media-breakpoint-up(lg) {
+        text-align:inherit;
+
+        .mm-nav{
+            float:right;
+
+            &__item{
+
+                &:last-child{
+                    margin-right:0;
+                    a{
+                        padding-right:0;
+                    }
+                }
+            }
+        }
+    }
+
+  &--subfooter{
+        background: #252525;
+
+        &__text{
+          color: #fff;
+          font-size:16px;
+          line-height:44px;
+        }
+        .mm-nav{
+
+
+            &__item{
+                height:44px;
+
+                a{
+                    color: #fff;
+                    font-size:16px;
+                    &:hover{
+                        text-decoration: none;
+                    }
+                }
+
+                &:after{
+                    display:none;
+                }
+
+                &.current-menu-item{
+                    a{
+                        color: $brand-secondary;
+                    }
+                }
+
+                &--icon a{
+                    display:inline-block;
+                    width:44px;
+                    height:44px;
+                    background: #fff;
+                    border-radius:100%;
+                    text-indent:-9999px;
+                    overflow:hidden;
+                }
+
+                &--pracujpl a{
+                    background: #fff url('../images/socials-pracujpl.png') center center no-repeat;
+                }
+
+                &--li a{
+                    background: #fff url('../images/socials-linkedin.png') center center no-repeat;
+                }
+            }
+
+            @include media-breakpoint-up(lg) {
+
+                &__item{
+                    &:first-child{
+                        margin-left:0;
+                        a{
+                            padding-left:0;
+                        }
+                    }
+
+                    &:last-child{
+                        margin-right:0;
+                    }
+                }
+            }
+        }
+
+    }
+
+}

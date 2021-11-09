@@ -1,0 +1,91 @@
+// UI
+.ui-helper-hidden-accessible {
+	height:1px;
+	width:1px;
+	margin:-1px;
+	padding:0;
+	border:0;
+	overflow:hidden;
+	position:absolute;
+	clip:rect(0 0 0 0);
+}
+
+.ui-autocomplete {
+  background-color:rgba(255,255,255,.7);
+	position: absolute;
+	top: 0;
+	left: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+	cursor: default;
+
+  @include media-breakpoint-up(md){
+    max-width:330px;
+  }
+
+  @include media-breakpoint-up(lg){
+    max-width:210px;
+  }
+
+  @include media-breakpoint-up(xl){
+    max-width:270px;
+  }
+}
+
+.ui-front {
+	z-index: 100;
+}
+
+.ui-widget.ui-widget-content {
+	border: 1px solid #c5c5c5;
+}
+
+.ui-widget-content {
+	border: 1px solid #dddddd;
+	background: #ffffff;
+	color: #333333;
+}
+
+.ui-widget-content a {
+	color: #333333;
+}
+
+.ui-menu {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: block;
+	outline: 0;
+}
+
+.ui-menu .ui-menu {
+	position: absolute;
+}
+
+.ui-menu .ui-menu-item {
+	margin: 0;
+  padding:8px 6px;
+  color:#999;
+	cursor: pointer;
+	/* support: IE10, see #8844 */
+//	list-style-image: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
+}
+
+.ui-menu .ui-menu-item-wrapper {
+	position: relative;
+	padding: 3px 1em 3px .4em;
+}
+
+.ui-menu .ui-menu-divider {
+	margin: 5px 0;
+	height: 0;
+	font-size: 0;
+	line-height: 0;
+	border-width: 1px 0 0 0;
+}
+
+.ui-menu .ui-state-focus,
+.ui-menu .ui-state-active {
+	color:#777;
+}

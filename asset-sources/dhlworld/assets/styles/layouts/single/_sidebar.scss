@@ -1,0 +1,87 @@
+.wrap--has-bg .sidebar{
+  margin-top:2vw;
+}
+
+.recommended-aside{
+  margin-bottom:50px;
+
+  &__title{
+    margin-top:0;
+    padding-bottom:12px;
+    border-bottom:1px solid #f2f2f2;
+    color:#000;
+    font-size:1.125rem;
+    text-transform:uppercase;
+  }
+
+  &__list{
+    margin-top:16px;
+    margin-bottom:16px;
+    padding:0;
+    list-style:none;
+  }
+
+  &__item{
+    margin:3px 0 0 0;
+    padding:24px 22px;
+    display:block;
+    overflow:hidden;
+    background-color:#fafafa;
+  }
+
+  &__link{
+    margin-bottom:18px;
+    display:block;
+    color:#000;
+    font-family:$bold-font-family;
+    line-height:1.2;
+
+    @include hover-focus{
+      color:#000;
+      text-decoration:underline;
+    }
+  }
+
+  &__tag{
+    border-top-left-radius:14px 50%;
+    border-top-right-radius:14px 50%;
+    border-bottom-left-radius:14px 50%;
+    border-bottom-right-radius:14px 50%;
+    padding:4px 12px;
+    display:inline-block;
+    background-color:$brand-secondary;
+    color:#000;
+    font-family:$bold-font-family;
+    font-size:.75rem;
+    text-transform:uppercase;
+
+    @include hover-focus{
+      background-color:lighten($brand-secondary, 14%);
+      color:#000;
+      text-decoration:none;
+    }
+  }
+
+  &__time{
+    margin-top:8px;
+    padding:4px 0 4px 20px;
+    display:block;
+    background:url("../images/icon-clock-red.png") no-repeat 0 50%;
+    font-size:.875rem;
+
+    @include media-breakpoint-up(sm){
+      margin-top:0;
+      float:right;
+    }
+
+    @include media-breakpoint-up(md){
+      margin-top:8px;
+      float:none;
+    }
+
+    @include media-breakpoint-up(lg){
+      margin-top:0;
+      float:right;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.form-partner {
+  &-send {
+    margin-top: 32px;
+    width: 100%;
+    @include media-breakpoint-down(lg) {
+      margin-top: 0px;
+    }
+  }
+  .contact__form--thanks {
+    position: relative;
+    &--img {
+      margin-top: 0px;
+    }
+  }
+}

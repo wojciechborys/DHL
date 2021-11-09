@@ -1,0 +1,105 @@
+.assignment_services {
+  padding: 130px 0 140px 0;
+  @include screen-max(lg){
+    padding: 105px 0 115px 0;
+  }
+  @include screen-max(md){
+    padding: 70px 0 80px 0;
+  }
+  @include screen-max(sm){
+    padding: 50px 0 60px 0;
+  }
+  &--title {
+    font-family: "Delivery Black Condensed";
+    color: #323232;
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 48px;
+    text-align: center;
+    text-transform: uppercase;
+    @include screen-max(lg){
+      font-size: 32px;
+    }
+    @include screen-max(md){
+      font-size: 30px;
+    }
+    @include screen-max(sm){
+      font-size: 25px;
+    }
+    @include screen-max(sm){
+      font-size: 24px;
+    }
+  }
+  &--cards {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+
+    @include screen-max(lg){
+      margin-top: 25px;
+      padding: 0;
+    }
+    @include screen-max(md){
+      margin-top: 0;
+    }
+
+    .card {
+      border: 1px solid rgba(229, 229, 229, 0.35);
+      border-top: unset;
+      height: 100%;
+      box-shadow: 0 4px 1px -2px rgba(229, 228, 228, 0.6);
+      overflow: hidden;
+      border-radius: 8px;
+      @include screen-max(lg){
+        padding: 0;
+      }
+      @include screen-max(md){
+        height: unset;
+        margin: 35px 10px 0 10px;
+      }
+      @include screen-max(sm){
+        margin: 26px 31px 0 31px;
+      }
+
+      &-wrapper {
+        overflow: hidden;
+        height: 208px;
+      }
+
+      &-body {
+        @include screen-max(lg){
+          padding: 15px;
+        }
+        @include screen-max(md){
+          padding: 10px;
+        }
+        @include screen-max(sm){
+          padding: 20px;
+        }
+        p {
+          margin: 0;
+          font-size: 16px;
+          @include screen-max(lg){
+            font-size: 15px;
+          }
+          @include screen-max(md){
+            font-size: 16px;
+          }
+        }
+      }
+      &-title {
+        font-size: 22px;
+        font-weight: 700;
+        @include screen-max(lg){
+          font-size: 21px;
+        }
+        @include screen-max(md){
+          margin-top: 5px;
+        }
+        @include screen-max(sm){
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}

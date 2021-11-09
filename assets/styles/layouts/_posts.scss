@@ -1,0 +1,40 @@
+$mainHeaderBgHeight:   34vw;
+$mainHeaderBgMTop:     -32vw;
+$mainHeaderBgMToSingle:     -48vw;
+
+$mainHeaderBgHeightMd: 27vw;
+$mainHeaderBgMTopMd:   -25vw;
+$mainHeaderBgMTopMdSingle:   -35vw;
+
+
+$mainHeaderBgHeightXxl: 27vw;
+$mainHeaderBgMTopXxl:   -24vw;
+
+body.single{
+  background-color:#fff;
+}
+
+.wrap--single{
+  padding-top:4vw;
+  background-repeat:no-repeat;
+  background-position:50% 0;
+  background-size:auto 50vw;
+
+  @include media-breakpoint-up(sm){
+    background-size:100% auto;
+  }
+
+  &.wrap--has-bg{
+    padding-top:50vw;
+
+    @include media-breakpoint-up(sm){
+      padding-top:32vw;
+    }
+  }
+}
+
+@import "single/header";
+@import "single/content";
+@import "single/sidebar";
+@import "single/social";
+@import "single/related";

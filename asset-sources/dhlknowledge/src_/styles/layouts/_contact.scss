@@ -1,0 +1,359 @@
+.background_image {
+	margin-bottom: 55px;
+	@include media-breakpoint-down(lg) {
+		margin-bottom: 55px;
+	}
+	@include media-breakpoint-down(xs) {
+		margin-bottom: 40px;
+	}
+	&--header {
+		min-height: 425px;
+		margin-top: 82px;
+		@include media-breakpoint-down(xs) {
+			min-height: 325px;
+		}
+	}
+	&--footer {
+		min-height: 585px;
+		position: relative;
+		@include media-breakpoint-down(md) {
+			min-height: 485px;
+		}
+		@include media-breakpoint-down(xs) {
+			min-height: 385px;
+		}
+		&::after {
+			position: absolute;
+			content: "";
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: 0;
+			background: $black;
+			opacity: .3;
+			z-index: 5;
+		}
+	}
+	&--layer {
+		position: relative;
+		z-index: 10;
+	}
+	&--title {
+		margin-bottom: 20px;
+		@include media-breakpoint-down(md) {
+			margin-bottom: 15px;
+		}
+	}
+	&--subtitle {
+		margin-bottom: 55px;
+		@include media-breakpoint-down(md) {
+			margin-bottom: 35px;
+		}
+		@include media-breakpoint-down(xs) {
+			br {display: none;}
+		}
+	}
+}
+
+.shortcuts {
+	&--title {
+		margin-bottom: 70px;
+		@include media-breakpoint-down(md) {
+			margin-bottom: 40px;
+		}
+	}
+
+	.accordion {
+		.card {
+			margin-bottom: 9px;
+			border: none;
+		}
+		.card-header {
+			border: none;
+			&--imgContainer {
+				width: 80px;
+				height: 100%;
+				left: 2px;
+				top: 0;
+				display: block;
+				position: absolute;
+				text-align: center;
+				@include media-breakpoint-only(lg) {
+					left: -10px;
+					width: 50px;
+				}
+				@include media-breakpoint-down(xs) {
+					left: -10px;
+					width: 50px;
+				}
+			}
+			&--img {
+				display: inline-block;
+			}
+			&--btn {
+				padding-left: 95px;
+				position: relative;
+				display: block;
+				text-align: left;
+				width: 100%;
+				text-decoration: none;
+				@include media-breakpoint-only(lg) {
+					padding-left: 55px;
+				}
+				@include media-breakpoint-down(xs) {
+					padding-left: 55px;
+				}
+				&::after {
+					position: absolute;
+					content: "";
+					right: 14px;
+					top: 49%;
+					width: 12px;
+					height: 8px;
+					background: url(../images/acc_arrow_top.png) no-repeat center center;
+					@include media-breakpoint-only(lg) {
+						right: 0;
+						top: 45%;
+					}
+					@include media-breakpoint-down(xs) {
+						right: 0;
+						top: 45%;
+					}
+				}
+				&.collapsed {
+					&::after {
+						background: url(../images/acc_arrow_bottom.png) no-repeat center center;
+					}
+				}
+			}
+		}
+		.card-header:last-child,
+		.card-header:first-child {
+			@include radius();
+		}
+		.card-body {
+			padding-left: 45px;
+			padding-right: 45px;
+			padding-bottom: 45px;
+			@include media-breakpoint-down(lg) {
+				padding-top: 0;
+			}
+			@include media-breakpoint-down(xs) {
+				padding-left: 25px;
+				padding-right: 25px;
+			}
+		}
+	}
+}
+
+.contact__form {
+	position: relative;
+	&--border {
+		border-left: 1px solid #eeeeee; //$light-gray;
+		@include media-breakpoint-down(md) {
+			border: none;
+		}
+	}
+	&--title {
+		margin-bottom: 50px;
+		@include media-breakpoint-down(md) {
+			margin-top: 50px;
+		}
+	}
+	&--thanks {
+		position: absolute;
+		z-index: 20;
+		left: 0;
+		top: 0;
+		background: $white;
+		width: 100%;
+		height: 100%;
+		@include media-breakpoint-down(md) {
+			position: static;
+		}
+		&--img {
+			margin-top: 70px;
+			@include media-breakpoint-down(md) {
+				margin-top: 30px;
+			}
+		}
+	}
+}
+
+.call_us {
+	margin-bottom: 41px;
+	&--title {
+		margin-bottom: 69px;
+		margin-top: 70px;
+		@include media-breakpoint-down(xs) {
+			margin-bottom: 49px;
+			margin-top: 50px;
+		}
+	}
+	&--item {
+		padding-top: 53px;
+		padding-bottom: 49px;
+		@include media-breakpoint-only(sm) {
+			padding-top: 33px;
+			padding-bottom: 29px;
+		}
+	}
+}
+
+
+.hotline_diagram {
+	margin-bottom: 27px;
+	&--item {
+		border-right: 1px solid $border-color;
+		padding-bottom: 5px;
+		margin-bottom: 20px; //48
+		padding-left: 20px;
+		padding-right: 20px;
+		&:last-child {
+			border: none;
+		}
+		&:nth-child(3) {
+			@include media-breakpoint-only(md) {
+				border: none;
+			}
+		}
+		&:nth-child(4),
+		&:nth-child(2) {
+			@include media-breakpoint-only(sm) {
+				border: none;
+			}
+		}
+		@include media-breakpoint-down(xs) {
+			border: none;
+		}
+	}
+	&--title {
+		padding-top: 36px;
+		margin-bottom: 40px; //50
+	}
+	&--item_counter {
+		@include shadow(0 9px 40px rgba(175, 175, 175, 0.27));
+		width: 40px;
+		height: 40px;
+		background: $white;
+		margin-bottom: 15px;
+		padding-top: 6px;
+	}
+}
+
+
+.contact__box {
+	margin-bottom: 88px;
+	@include media-breakpoint-down(xs) {
+		margin-bottom: 44px;
+	}
+	&--tile {
+		padding-top: 52px;
+		padding-bottom: 43px;
+		@include media-breakpoint-down(sm) {
+			padding-top: 32px;
+			padding-bottom: 23px;
+		}
+	}
+	&--img {
+		margin-bottom: 30px;
+		@include media-breakpoint-down(sm) {
+			margin-bottom: 15px;
+		}
+	}
+}
+
+.footer__menu {
+	padding-left: 0;
+	list-style: none;
+	margin-top: 20px;
+	@include media-breakpoint-down(xs) {
+		margin-top: 10px;
+	}
+	&--item {
+
+	}
+	&--link {
+
+	}
+}
+@include media-breakpoint-down(xs) {
+	.nav-toggle {
+		display: block;
+		position: relative;
+	  	padding: 5px 5px 10px;
+	  	margin-bottom: 10px;
+	  	border-bottom: 1px solid $light-gray;
+		&::after {
+		  	position: absolute;
+		  	content: "";
+		  	right: 20px;
+			top: 40%;
+			width: 12px;
+			height: 8px;
+			background: url(../images/acc_arrow_bottom.png) no-repeat center center;
+		}
+		&.active {
+			&::after {
+				background: url(../images/acc_arrow_top.png) no-repeat center center;
+			}
+		}
+	}
+	.nav-toggle:hover {
+	  cursor: pointer;
+	}
+	.nav-items {
+		padding: 5px 5px;
+		overflow: hidden;
+	    padding-top: 0;
+	    padding-bottom: 0;
+	    height: 0;
+		-webkit-transition: all 300ms ease;
+		-moz-transition: all 300ms ease;
+		-o-transition: all 300ms ease;
+		transition: all 300ms ease;
+	  &.active {
+	    height: 150px;
+	  }
+	}
+
+}
+
+.link--send-form {
+	background: url(../images/mail_ico.png) no-repeat left center;
+	padding-left: 38px;
+	padding-bottom: 2px;
+}
+
+.mm-main-footer {
+	margin-top: 65px;
+	padding: 15px 0 35px;
+	@include media-breakpoint-down(sm) {
+		margin-top: 25px;
+	}
+}
+
+.inline-footer-menu {
+	margin-top: 2px;
+	&--item {
+		margin-left: 35px;
+		opacity: 0.49;
+		&:last-child {
+			opacity: 1;
+		}
+		@include media-breakpoint-down(md) {
+			margin-left: 15px;
+		}
+		@include media-breakpoint-down(sm) {
+			margin-right: 15px;
+			margin-left: 0;
+		}
+		@include media-breakpoint-down(xs) {
+			margin-bottom: 10px;
+		}
+	}
+	&--img {
+		margin-top: -6px;
+	}
+}
+

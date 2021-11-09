@@ -1,0 +1,16 @@
+.our-partners {
+  border-bottom: 1px solid #d5d4d3;
+  @include media-breakpoint-down(md) {
+    border-bottom: none;
+  }
+  &__col {
+    width: 20%;
+    margin-bottom: 20px;
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+    &__icon {
+      margin-bottom: 30px;
+    }
+  }
+}

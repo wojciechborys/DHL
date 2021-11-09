@@ -1,0 +1,101 @@
+
+.article-box{
+    margin:0 auto 30px;
+    padding-bottom:42px;
+    background: #fff;
+    flex: 0 0 50%;
+    max-width:360px;
+
+    a:hover{
+        text-decoration: none;
+    }
+
+    .header{
+        padding-left:30px;
+        padding-right:30px;
+        margin-bottom:24px;
+        @include media-breakpoint-down(lg){
+            // white-space: nowrap;
+            text-overflow: ellipsis;
+            width: 100%;
+            height:56px;
+            display: block;
+            overflow: hidden
+        }
+    }
+
+    .tag{
+        background: $brand-primary;
+        color: #fff;
+        font-size:12px;
+        padding: 1px 14px 3px 14px;
+        position:absolute;
+        top:15px;
+        right:15px;
+        z-index:2;
+    }
+
+    &__image-link{
+      margin-bottom:34px;
+      display:block;
+    }
+
+    &__image{
+        width:100%;
+        height:auto;
+        max-height:240px;
+    }
+
+    header{
+        position:relative;
+    }
+
+    &__excerpt{
+        padding-left:20px;
+        padding-right:20px;
+    }
+
+    &__footer{
+        font-size:14px;
+        text-align:center;
+
+        span:not(:first-child){
+            &:before{
+                content: '';
+                display:inline-block;
+                width:1px;
+                height:10px;
+                background:#dedede;
+                margin-left: 12px;
+                margin-right: 12px;
+            }
+        }
+    }
+
+    &--locked{
+        .article-box__image-link{
+            position:relative;
+            display:block;
+
+            &:after{
+                content:'';
+                display:block;
+                position:absolute;
+                background: rgba(0,0,0, 0.8) url('../images/lock.png') center center no-repeat;
+
+                width:100%;
+                height:100%;
+                top:0;
+                left:0;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+
+    .article-box{
+        margin-left:auto;
+        margin-right:auto;
+    }
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+<title>API: Class Animation</title>
+
+<link rel="stylesheet" href="../../assets/docs.css">
+
+</head>
+<body>
+	<div id="wrapper">
+		
+		<h1>API: Class Animation</h1>
+		
+		<div id="docs">
+		
+			<h2>Initiate</h2>
+			
+			<p>Initiate with the <em>animate()</em> method of Earth, Marker, Line or Overlay</a>.</p>
+
+		
+			<h2 id="prop">Animation Properties</h2>
+			
+			<p><a href="../examples/animatable-properties.htm"><strong>Example (Animatable Properties)</strong></a></p>
+				
+			<h3>duration <var>(float)</var></h3>
+			<p class="default-value"><samp>400 (ms)</samp></p>
+			
+			<h3>relativeDuration <var>(float)</var> <mark class="init-only"></mark></h3>
+			<p class="default-value"><samp>0</samp></p>
+			<p>Adds a duration relative to difference from start to end value. For lat/lng properties the <em>relativeDuration</em> is added as milliseconds per 1000 kilometers distance from start to end location.</p>
+			
+			<h3>easing <var>(easing)</var></h3>
+			<p class="default-value"><samp>in-out-quad</samp></p>
+			<p>See <a href="#easing">Easing</a></p>
+			
+			<h3>loop <var>(boolean)</var></h3>
+			<p class="default-value"><samp>false</samp></p>
+			<p>If <em>true</em> the animation never completes and jumps back to the start value.</p>
+			
+			<h3>oscillate <var>(boolean)</var></h3>
+			<p class="default-value"><samp>false</samp></p>
+			<p>If <em>true</em> and <em>loop</em>=true the animation plays back and forth.</p>
+			
+			<h3>lerpLatLng <var>(boolean)</var></h3>
+			<p class="default-value"><samp>false</samp></p>
+			<p><em>lerpLatLng</em> only effects lat/lng properties.</p>
+			<p>If <em>lerpLatLng</em> is <em>true</em> the lat/lng values are lerped as numbers (avoiding the polar regions) instead of the 3d position (shortest path).</p>
+			
+			<h3>complete <var>(function)</var></h3>
+			<p>Function to call when the animation completes.</p>
+			
+			<h3>end <var>(function)</var></h3>
+			<p>Function to call when the animation completes or it is stopped.</p>
+			
+			
+			<h3>target <var>(Earth, Marker, Line or Overlay)</var> <mark class="read-only"></mark></h3>
+			<p>Reference to the animated instance.</p>
+			
+			
+			<h3>t <var>(float)</var></h3>
+			<p class="default-value"><samp>0.0</samp></p>
+			<p class="value-range"><samp>0.0 - 1.0</samp></p>
+			<p>Current time of the animation as value from 0 to 1.</p>
+			
+			&nbsp;
+			
+			<div class="hint">
+				There are special properties (<em>approachAngle</em> and <em>zoom</em>) that are only used by the earths goTo method.
+			</div>
+			
+			
+			<h2>Animation Methods</h2>
+			
+				<h3>stop( <var>dispatchComplete</var>, <var>jumpToEnd</var> ) </h3>
+				<dl>
+				  <dt>dispatchComplete</dt><dd>(boolean) default: false | Call the complete function?</dd>
+				  <dt>jumpToEnd</dt><dd>(boolean) default: false | Set the property to the end value immediatly.</a></dd>
+				</dl>
+			
+			
+			<h2 id="easing">Easing</h2>
+			
+				<p><a href="../examples/animation-easing.htm"><strong>Example (Animation Easing)</strong></a></p>
+			
+				<h3>linear</h3>
+				<p>No easing</p>
+
+				<h3>in-quad, in-cubic, in-quart</h3>
+				<p>The animation starts slowly.</p>
+				
+				<h3>out-quad, out-cubic, out-quart</h3>
+				<p>The animation ends slowly.</p>
+				
+				<h3>in-out-quad, in-out-cubic, in-out-quart</h3>
+				<p>The animation starts and ends slowly.</p>
+				
+				
+				<h3>in-back, out-back, in-out-back</h3>
+				<p>The animation overshoots start and/or target value.</p>
+				
+				<h3>elastic</h3>
+				<p>Elastic effect.</p>
+				
+				<h3>bounce</h3>
+				<p>Bounce effect.</p>
+				
+				<h3>arc</h3>
+				<p>Special easing function that reaches the target value at half time and returns to the start value. This easing function is useful to draw lines as arcs with <em>offsetFlow</em> and <em>offsetEasing</em>.</p>
+				
+				&nbsp;
+				
+				<div class="hint">
+					You can register your own easing functions.
+				</div>
+				
+<code><pre>
+Earth.Animation.Easing['my-special-easing'] = function ( t ) {
+	// t (time) is a value from 0 to 1 you need to modify here
+	return t;
+};
+</pre></code>
+									
+		&nbsp;
+		
+		</div><!--docs-->
+		
+	</div>
+</body>
+</html>

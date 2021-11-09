@@ -1,0 +1,73 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+	background: #0e120f;
+	color: white;
+	font-family: sans-serif;
+}
+
+
+
+#myearth {
+	width: 100%;
+	height: 100vh;
+	max-height: 100vw;
+	overflow: hidden;
+	filter: brightness(0);
+	transform: scale(0.8);
+	transition: filter 3s ease, transform 1.25s ease;
+}
+#myearth.earth-ready {
+	filter: brightness(1.5);
+	transform: none;
+}
+
+#myearth::before {
+	content: none;
+}
+
+
+#glow {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 100%;
+	max-width: 100vh;
+	height: 100vh;
+	max-height: 100vw;
+	transform: translate(-50%, -50%);
+	
+	background: radial-gradient(ellipse at center, rgba(0,156,255,0) 33%,rgba(0,156,255,0.12) 50.5%,rgba(0,156,255,0.05) 51.75%,rgba(0,156,255,0) 70%);
+	z-index: 200;
+	pointer-events: none;
+}
+
+
+#res {
+	width: 0;
+	height: 0;
+	overflow: hidden;
+}
+
+
+
+.pulse-overlay {
+	width: 7%;
+	opacity: 0;
+	transition: opacity 0.2s ease-in-out;
+	transform-origin: center center;
+	background: radial-gradient(ellipse at center, rgba(50,187,255,0.6) 0%, rgba(50,187,255,0.2) 25%, rgba(50,187,255,0) 70%);
+}
+.pulse-overlay::before {
+	content: '';
+	display: block;
+	padding-top: 100%;
+}
+
+.pulse-now {
+	opacity: 1;
+}
+.earth-occluded.pulse-now {
+	opacity: 0.5;
+}

@@ -1,0 +1,125 @@
+.tails {
+  padding: 160px 0 90px;
+  @include media-breakpoint-down(md) {
+    padding: 90px 0 45px;
+  }
+
+  &__title {
+    margin-bottom: -15px;
+    @extend .font__title--01;
+    padding-bottom: 40px;
+    @include media-breakpoint-down(md) {
+      padding-bottom: 40px;
+      margin: 0;
+    }
+    @include media-breakpoint-down(sm) {
+      padding-bottom: 12px;
+      margin: 0;
+    }
+  }
+
+  &__subtitle {
+    color: #696969;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 31px;
+    margin: 0 auto 50px;
+
+    @include media-breakpoint-down(md) {
+      padding: 0 30px;
+      width: 70%;
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding: 0 30px;
+      width: 90%;
+    }
+  }
+
+  &-slider {
+    @include media-breakpoint-up(lg) {
+      .slick-track {
+        display: flex;
+      }
+
+      .slick-track .slick-slide {
+        display: flex;
+        height: auto;
+      }
+    }
+
+    .tail-slide {
+      position: relative;
+      padding: 0 35px;
+      @include media-breakpoint-up(lg) {
+        height: 100%;
+      }
+      @include media-breakpoint-down(md) {
+        padding: 0 15px;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 1px;
+        height: 100%;
+        background-color: rgba(#231a13, 0.14);
+        @include media-breakpoint-down(md) {
+          display: none;
+        }
+      }
+
+      &__pic {
+        max-width: 100px;
+
+        &-container {
+          display: flex;
+          justify-content: center;
+          align-items: flex-end;
+          height: 85px;
+          margin-bottom: 35px;
+        }
+      }
+
+      &__title {
+        text-transform: uppercase;
+        @extend .font__title--04;
+      }
+
+      &__desc {
+        @extend .font__subtitle--0222;
+      }
+    }
+
+    &__arrow {
+      width: 60px;
+      height: 60px;
+      box-shadow: 0 0 35px rgba(174, 184, 195, 0.32);
+      background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+
+      &--left {
+        left: -100px
+      }
+
+      &--right {
+        right: -100px;
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+    "dependencies": {
+        "main.js": {
+            "files": [
+                "../node_modules/owl.carousel/dist/owl.carousel.js",
+                "../../node_modules/slick-carousel/slick/slick",
+                "scripts/jquery.pin.js",
+                "scripts/jquery.cookie.js",
+                "scripts/main.js",
+                "scripts/carousels.js",
+                "scripts/globe.js"
+            ],
+            "main": true
+        },
+        "main.css": {
+            "files": [
+                "styles/main.scss",
+                "../../node_modules/slick-carousel/slick/slick",
+                "../../node_modules/slick-carousel/slick/slick-theme"
+            ],
+            "main": true
+        },
+        "form.css": {
+            "files": [
+                "styles/form.scss"
+            ]
+        },
+        "front.js": {
+            "files": [
+                "scripts/ui-widget-combobox.js",
+                "scripts/front.js"
+            ]
+        },
+        "jquery.js": {
+            "bower": [
+                "jquery"
+            ]
+        },
+        "jquery-mask-plugin.js": {
+            "bower": [
+                "jquery-mask-plugin"
+            ]
+        }
+    },
+    "config": {
+        "devUrl": "http://dhl.localhost"
+    }
+}

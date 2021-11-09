@@ -1,0 +1,8 @@
+/*
+Miniature Earth v1.1
+Copyright © 2019 Ulf Paule
+https://miniature.earth/
+
+Copyright © 2010-2019 three.js authors
+https://github.com/mrdoob/three.js/
+*/

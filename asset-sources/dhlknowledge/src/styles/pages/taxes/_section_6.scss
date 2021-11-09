@@ -1,0 +1,68 @@
+.section_6 {
+  @include screen-max(md) {
+    display: none;
+  }
+
+  .container-taxes-small {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    @include screen-max(md) {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+
+    .table-header {
+      border-radius: 16px 16px 0 0;
+      background-image: linear-gradient(180deg, #ffca00 0%, #fcf1bf 100%);
+      padding: 45px 25px 35px;
+      color: #212121;
+      font-family: "Delivery Black Condensed";
+      font-size: 19px;
+      font-weight: 900;
+      letter-spacing: normal;
+      line-height: 27px;
+    }
+
+    table {
+      &.striped {
+        tbody  {
+          tr {
+            &:nth-of-type(even) {
+              background-color: rgba(#e4e4e4, 0.5);
+            }
+          }
+        }
+      }
+
+      thead {
+        tr {
+          th {
+            padding: 25px 15px 25px 25px;
+          }
+        }
+      }
+
+      tbody {
+        tr {
+          td {
+            padding: 15px 15px 15px 25px;
+            line-height: 27px;
+            border-top: none;
+            border-bottom: none;
+          }
+        }
+      }
+    }
+
+    .misc-text {
+      margin-top: 60px;
+      color: #a4a4a4;
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: normal;
+      line-height: 23px;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,187 @@
+.search_blog {
+	margin-bottom: 57px;
+	@include media-breakpoint-down(md) {
+		margin-bottom: 47px;
+	}
+}
+.search_blog + .search_blog  {
+	margin-top: -57px;
+	@include media-breakpoint-down(md) {
+		margin-bottom: -47px;
+	}
+}
+
+
+.blog_category {
+	margin-bottom: 80px;
+	@include media-breakpoint-down(md) {
+		margin-bottom: 60px;
+	}
+	&--link {
+		&:hover {
+			text-decoration: none;
+			.font__color--gray {
+				color: $red;
+			}
+		}
+	}
+	&--item {
+		padding: 31px;
+		margin-bottom: 20px;
+		@include media-breakpoint-only(md) {
+			min-height: 250px;
+		}
+		@include media-breakpoint-only(sm) {
+			min-height: 250px;
+		}
+		&--home {
+			padding: 31px 27px;
+			min-height: 267px;
+			@include media-breakpoint-down(md) {
+				min-height: 230px;
+			}
+			@include media-breakpoint-down(sm) {
+				padding-bottom: 21px;
+				min-height: 250px;
+			}
+			@include media-breakpoint-down(xs) {
+				min-height: auto;
+			}
+		}
+		&--no-padding {
+			padding: 0;
+		}
+		.article--page--category & {
+			@include media-breakpoint-down(lg) {
+				min-height: 210px;
+			}
+		}
+	}
+	&--ico {
+		min-height: 98px;
+		&--article {
+			min-height: 70px;
+			img {
+				margin-top: 0!important;
+				margin-bottom: 0!important;
+			}
+		}
+		&--home {
+			min-height: 75px;
+			@include media-breakpoint-down(md) {
+				min-height: 75px;
+			}
+		}
+	}
+}
+
+.popular_questions {
+	margin-bottom: 120px;
+	@include media-breakpoint-down(md) {
+		margin-bottom: 70px;
+	}
+	&--title {
+		margin-bottom: 55px;
+		@include media-breakpoint-down(md) {
+			margin-bottom: 45px;
+		}
+	}
+}
+
+.newsletter_form {
+	margin-bottom: 90px;
+	@include media-breakpoint-down(md) {
+		margin-bottom: 65px;
+	}
+}
+
+.article_blog {
+	margin-bottom: 93px;
+	@include media-breakpoint-down(md) {
+		margin-bottom: 73px;
+	}
+	&--home {
+		margin-bottom: 0;
+		padding-bottom: 220px;
+		padding-top: 120px;
+		@include media-breakpoint-down(lg) {
+			padding-top: 60px;
+			padding-bottom: 80px;
+		}
+	}
+	&--title {
+		margin-bottom: 71px;
+		@include media-breakpoint-down(md) {
+			margin-bottom: 51px;
+		}
+	}
+	&--desc {
+		padding: 30px;
+		min-height: 215px;
+		box-shadow: 0 3px 0 #ecedee;
+		@include media-breakpoint-down(md) {
+			min-height: auto;
+		}
+	}
+}
+
+.accordion.list {
+	.card {
+		border: none;
+		.card-header {
+			background: $white;
+			padding: 0.2rem 0;
+			padding-left: 0;
+			border: none;
+			border-top: 1px solid $accordion-border;
+			@include media-breakpoint-down(sm) {
+				padding-left: 15px;
+			}
+			&--btn {
+				padding-left: 0px;
+				position: relative;
+				display: block;
+				text-align: left;
+				width: 100%;
+				text-decoration: none;
+				white-space: normal;
+				@include media-breakpoint-only(lg) {
+					padding-left: 0px;
+				}
+				@include media-breakpoint-down(xs) {
+					padding-left: 0px;
+				}
+				&::after {
+					position: absolute;
+					content: "";
+					right: 16px;
+					top: 49%;
+					width: 14px;
+					height: 8px;
+					background: url(../images/acc_arrow_top_b.png) no-repeat center center;
+					@include media-breakpoint-only(lg) {
+						right: 16px;
+						top: 45%;
+					}
+					@include media-breakpoint-down(xs) {
+						right: 16px;
+						top: 45%;
+					}
+				}
+				&.collapsed {
+					&::after {
+						background: url(../images/acc_arrow_bottom_b.png) no-repeat center center;
+					}
+				}
+			}
+		}
+		.card-body {
+			padding-left: 0;
+			padding-top: 0;
+			padding-bottom: 45px;
+			@include media-breakpoint-down(sm) {
+				padding-left: 15px;
+			}
+		}
+	}
+}

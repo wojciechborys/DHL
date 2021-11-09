@@ -1,0 +1,11 @@
+@mixin border-radius($radius) {
+  border-radius: $radius;
+}
+
+@mixin animation($prop: all, $duration: 0.3s, $easing: ease-in-out) {
+  -webkit-transition: $prop $duration $easing;
+  -moz-transition: $prop $duration $easing;
+  -ms-transition: $prop $duration $easing;
+  -o-transition: $prop $duration $easing;
+  transition: $prop $duration $easing;
+}

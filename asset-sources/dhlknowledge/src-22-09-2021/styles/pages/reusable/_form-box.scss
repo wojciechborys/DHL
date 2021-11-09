@@ -1,0 +1,89 @@
+.form-box {
+  padding: 50px 40px;
+  box-shadow: 0 0 92px #aeb8c3;
+  background-color: #ffffff;
+  max-width: 534px;
+  width: 100%;
+  @include media-breakpoint-down(sm) {
+    padding: 25px 15px;
+  }
+
+  &__group {
+    display: flex;
+
+    &--row {
+      flex-direction: row;
+    }
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+
+    &--half {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+
+    &--full {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-top: -40px;
+  }
+  margin-bottom: -44px;
+  //min-height: 820px;
+
+  &__iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 830px;
+    @media screen and (max-width: 1280px) and (min-width: 991px) {
+      min-height: 900px;
+    }
+    @media screen and (max-width: 335px) {
+      min-height: 1090px !important;
+    }
+    @include media-breakpoint-down(sm) {
+      min-height: 990px;
+    }
+  }
+}
+
+//.ixp-text h1 {
+//  font-size: 30px;
+//  margin-bottom: 25px;
+//}
+//
+//.ixp-text {
+//  padding: 0 !important;
+//  font-size: 18px;
+//}
+//
+//.ixp-container .ixp-grid-row:first-of-type {
+//  margin-bottom: 50px;
+//}
+//
+//.ixp-component-form-style-brand-brand .ixp-component-textbox-inherit .ixp-component-textbox-input {
+//  border-color: #c5c5c5 !important;
+//  padding-top: 20px;
+//  padding-bottom: 20px;
+//  padding-left: 22px;
+//}
+//
+//.ixp-component-form-style-brand-brand .ixp-component-textbox-inherit .ixp-component-textbox-input::placeholder {
+//  color: #c5c5c5 !important;
+//}
+//
+//.ixp-component-form-style-brand-brand .ixp-component-form-field .ixp-input.ixp-input-validation-valid input {
+//  border-color: #f1ce31 !important;
+//}
+//
+//.ixp-component-form-style-brand-brand .ixp-component-form-field .ixp-input.ixp-input-validation-valid .ixp-component-textbox-input-wrap::after {
+//  background: #f1ce31 !important;
+//  bottom: 18px;
+//  right: 13px;
+//}

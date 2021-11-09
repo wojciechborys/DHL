@@ -1,0 +1,74 @@
+.share-buttons{
+
+    a:hover{
+        text-decoration:none;
+    }
+
+    &--big{
+        /*
+        @todo: zmienić wymiary na elastyczne
+        */
+        border-radius:5px;
+        border: 1px solid #e6e6e6;
+        padding:12px;
+        font-size:12px;
+        margin-bottom:30px;
+        height:104px;
+        width: 190px;
+        
+        ul{
+            list-style:none;
+            padding:0;
+            margin-bottom:0;
+        }
+        
+        li{
+            float: left;
+            
+            &:not(:first-child){
+                border-left:1px solid #e6e6e6;
+            }
+        }
+
+        .share-buttons{
+            &__link{
+                display:block;
+                height:83px;
+                &--fb{
+                    background:url('../images/socials.png') 0 0 no-repeat;
+                    text-indent:-99999px;
+                    overflow:hidden;
+                }
+                &--twitter{
+                    background:url('../images/socials.png') 0 -83px no-repeat;
+                    text-indent:-99999px;
+                    overflow:hidden;
+                }
+                &--linkedin{
+                    background:url('../images/socials.png') 0 -166px no-repeat;
+                    // text-indent:-99999px;
+                    overflow:hidden;
+                    width:54px;
+                }
+            }
+        }
+        
+        @media screen and (min-width: 1440px) {
+            position:absolute;
+            left:-110px;
+            top:30px;
+            width:80px;
+            height:auto;
+            
+            li{
+                float: none;
+                
+                &:not(:first-child){
+                    border-left:0;
+                    border-top:1px solid #e6e6e6;
+                }
+            }
+        }
+        
+    }
+}

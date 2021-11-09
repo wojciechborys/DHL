@@ -1,0 +1,86 @@
+.section_4 {
+  background-image: linear-gradient(180deg, rgba(216, 216, 216, 0.37) 0%, #ffffff 100%);
+
+  .container-taxes-small {
+    padding-top: 100px;
+    padding-bottom: 45px;
+
+    @include screen-max(md) {
+      padding-top: 80px;
+      padding-bottom: 30px;
+    }
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__box {
+    //box-shadow: 0 5px 0 rgba(201, 201, 201, 0.5);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+
+    @include screen-max(md) {
+      margin-bottom: 30px;
+    }
+
+    &_top {
+      background-image: url(../images/gradient-bg.png);
+      background-repeat: no-repeat;
+      background-position: top center;
+      background-size: 100% 100%;
+      border-radius: 15px 15px 0 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 1px solid #e4e4e4;
+      border-top: none;
+      border-bottom: none;
+      background-color: white;
+
+      &__title {
+        text-align: center;
+        color: #212121;
+        font-family: "Delivery Black Condensed";
+        font-size: 24px;
+        font-weight: 900;
+      }
+
+      &__icon {
+        width: 75px;
+        height: 75px;
+        background-image: url(../images/check_mark.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+    }
+
+    &_bottom {
+      background-color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 45%;
+      border-radius: 0px 0px 15px 15px;
+      border: 1px solid #e4e4e4;
+      border-top: none;
+      box-shadow: 0 5px 0 rgba(201, 201, 201, 0.5);
+      padding-top: 55px;
+      padding-bottom: 45px;
+
+      @include screen-max(md) {
+        padding-top: 25px;
+        padding-bottom: 10px;
+      }
+
+      &__text {
+        text-align: center;
+        font-family: "Delivery Regular";
+        font-size: 16px;
+      }
+
+    }
+  }
+}

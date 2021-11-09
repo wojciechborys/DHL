@@ -1,0 +1,96 @@
+.form-group {
+	&.error {
+		position: relative;
+		.form-control {
+			border-color: $yellow;
+		}
+		&::after {
+			position: absolute;
+			content: "";
+			width: 28px;
+			height: 28px;
+			top: 52%;
+			right: 17px;
+			background: $yellow;
+			@include radius(50%);
+			z-index: 10;
+		}
+	}
+}
+
+.form-control {
+	width: 100%;
+	@include radius();
+}
+
+.tracking_nr {
+	&::placeholder {
+	  //font-style: italic;
+	  opacity: 1;
+	  color: $gray;
+	}
+}
+
+.ui-autocomplete {
+	max-width: 320px;
+	max-height: 210px;
+	overflow: hidden;
+	overflow-y: scroll;
+}
+
+.ui-menu {
+	z-index: 9999999;
+	list-style: none;
+	padding-left: 0;
+	margin-left: 0;
+	.ui-menu-item {
+	    margin: 0;
+	    padding: 8px 14px;
+	    color: #999;
+	    cursor: pointer;
+	    &:hover {
+	    	background: $yellow;
+	    	.ui-menu-item-wrapper {
+	    		background: $yellow!important;
+	    		border: none!important;
+	    		color: $white;
+	    	}
+	    }
+	    .ui-menu-item-wrapper {
+    		background: $white!important;
+    		border: none!important;
+    	}
+	}
+}
+
+.bs-popover-bottom {
+	.arrow {
+		margin-top: 1px;
+		&::after,
+		&::before {
+			border-bottom-color: $white;
+		}
+	}
+	.popover-body {
+		background: $white;
+		@include radius(5px);
+	}
+}
+
+.infoTooltip {
+	@extend .font__title--0555;
+	text-align: center;
+	display: inline-block;
+	@include radius(50%);
+	width: 59px;
+	height: 59px;
+	color: $defaultHeadingColor;
+	background-color: $white;
+	padding-top: 15px;
+	box-shadow: 0 10px 8px rgba(223, 223, 223, 0.42);
+	&:hover {
+		text-decoration: none;
+		color: $red;
+	}
+}
+

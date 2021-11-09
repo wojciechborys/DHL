@@ -1,0 +1,123 @@
+.section_8 {
+  .container-taxes-small {
+    padding-top: 110px;
+    padding-bottom: 40px;
+
+    @include screen-max(md) {
+      padding-top: 30px;
+      padding-bottom: 10px;
+    }
+
+    table {
+      @include screen-max(md) {
+        display: none;
+      }
+
+      thead {
+        background-color: #f1f1f1;
+
+        tr {
+          th {
+            padding: 25px 15px 25px 20px;
+            border-color: #f1f1f1;
+            font-family: "Delivery Black Condensed";
+            font-size: 19px;
+            font-weight: 900;
+            letter-spacing: normal;
+            line-height: 27px;
+          }
+        }
+      }
+
+      tbody {
+        tr {
+          td {
+            padding: 30px 15px 28px 20px;
+            line-height: 27px;
+
+            &:first-child {
+              width: 65px;
+            }
+          }
+
+          &:first-child {
+            td {
+              border-top: none;
+            }
+          }
+        }
+
+        .striped {
+          background-color: #f1f1f1;
+        }
+
+        .number-col {
+          color: $brand-primary;
+          font-family: "Delivery Bold";
+          font-size: 24px;
+          font-weight: 700;
+          border-radius: 6px;
+          background-image: linear-gradient(180deg, #ffca00 0%, #ffffff 100%);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          top: 10px;
+          height: calc(100% - 10px);
+          left: 8px;
+          width: calc(100% - 16px);
+        }
+
+        td {
+          b {
+            font-family: "Delivery Bold";
+          }
+
+          &:nth-child(2) {
+            width: 30%;
+
+            @include screen-min(xl) {
+              width: 315px;
+            }
+          }
+
+          &:nth-child(3) {
+            width: 35%;
+
+            @include screen-min(xl) {
+              width: 375px;
+            }
+          }
+        }
+      }
+    }
+
+    .table {
+      &--radius {
+        border-radius: 16px 16px 0 0;
+        overflow: hidden;
+        padding: 0 1px;
+      }
+    }
+
+    .subtitle {
+      padding: 10px 0 50px;
+      line-height: 26px;
+      max-width: 80%;
+      margin: 0 auto;
+
+      @include screen-max(md) {
+        padding: 10px 0;
+        max-width: inherit;
+      }
+    }
+
+    .taxes-file {
+      margin: 40px 0 30px;
+
+      @include screen-max(md) {
+        margin: 10px 0 30px;
+      }
+    }
+  }
+}

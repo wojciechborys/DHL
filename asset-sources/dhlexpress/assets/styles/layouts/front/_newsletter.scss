@@ -1,0 +1,18 @@
+.home-newsletter {
+  background: url('../images/home-newsletter-bg.jpg') top center no-repeat;
+  background-size: cover;
+  padding: 5em 0;
+}
+
+.newsletter {
+  background: white;
+  border-bottom: 6px solid #ffcc00;
+
+  &__step {
+    display: none;
+
+    &--current {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+<title>Light Types</title>
+
+<link rel="stylesheet" href="../../assets/docs.css">
+
+<script src="../../earth.min.js"></script>
+
+<script>
+
+window.addEventListener( "load", function() {
+
+	// simple
+	
+	var myearth = new Earth( "myearth", {
+		light: 'none'
+	} );
+	
+	myearth.addMarker( {
+		mesh : ["Pin2", "Needle"],
+		location : { lat: 35, lng: -45 },
+		scale: 1.5
+	} );
+	
+	
+	// simple
+	
+	var myearth2 = new Earth( "myearth2", {
+		light: 'simple'
+	} );
+	
+	myearth2.addMarker( {
+		mesh : ["Pin2", "Needle"],
+		location : { lat: 35, lng: -45 },
+		scale: 1.5
+	} );
+	
+	
+	// sun
+	
+	var myearth3 = new Earth( "myearth3", {
+		light: 'sun'
+	} );
+	
+	myearth3.addMarker( {
+		mesh : ["Pin2", "Needle"],
+		location : { lat: 35, lng: -45 },
+		scale: 1.5
+	} );
+	
+} );
+
+</script>
+
+</head>
+<body>
+	<div id="multi-wrapper">
+		
+		<h1>Light Types</h1>
+
+		<div class="earth-wrap">
+			<div id="myearth"></div>
+			light: none
+		</div>
+		
+		<div class="earth-wrap">
+			<div id="myearth2"></div>
+			light: simple (default)
+		</div>
+		
+		<div class="earth-wrap">
+			<div id="myearth3"></div>
+			light: sun
+		</div>
+
+	</div>
+	
+</body>
+</html>

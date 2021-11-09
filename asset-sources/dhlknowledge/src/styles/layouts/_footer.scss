@@ -1,0 +1,68 @@
+.buttons-item1 a, .buttons-item2 a {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.buttons-item1, .buttons-item2 {
+  display: none;
+}
+
+@media only screen and (max-width: 480px) {
+
+  .mobileFooter {
+    display: inline-block;
+    padding: 10px;
+  }
+
+  .mobileShow {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #D40511;
+    height: 70px;
+    z-index: 9999;
+    font-weight: bold;
+  }
+  .buttons-item1 {
+    border-right: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+  }
+  .buttons-item2 {
+    border-right: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+  }
+  .buttons-item1 a {
+    display: unset;
+    background: url(../images/call-us.svg) no-repeat left;
+    padding-left: 30px;
+    margin-top: 10px
+  }
+  .buttons-item2 a {
+    display: unset;
+    background: url(../images/offer_footer.svg) no-repeat left;
+    background-size: 25px 30px;
+    padding-left: 30px;
+    margin-top: 10px
+  }
+
+  .margin--footer {
+    margin-right: 15px;
+  }
+
+
+}
+
+@media only screen and (max-width: 1000px) {
+  .mobile-margin-bottom {
+    margin-bottom: 20px;
+  }
+}

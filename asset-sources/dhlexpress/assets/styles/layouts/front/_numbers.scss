@@ -1,0 +1,90 @@
+.numbers-section{
+  padding-top:96px;
+  padding-bottom:140px;
+  background:url("../images/bg-ocean-view.jpg") no-repeat 40% 50%;
+  background-size:auto 100%;
+
+  @include media-breakpoint-up(md){
+    padding-bottom:100px;
+    background-position:90% 50%;
+  }
+
+  @include media-breakpoint-up(lg){
+    padding-bottom:110px;
+    background-position:100% 50%;
+  }
+
+  @media screen and (min-width:1500px) {
+    background-size:100% auto;
+  }
+
+  &__header{
+    margin-top:0;
+    margin-bottom:12px;
+    color:#fff;
+    font-size:2.5rem;
+  }
+
+  &__info{
+    max-width:420px;
+    margin-bottom:42px;
+    color:#fff;
+
+    @include media-breakpoint-up(md){
+      margin-bottom:70px;
+    }
+  }
+
+  &__facts{
+    padding:0;
+    list-style:none;
+  }
+
+  &__fact-wrapper{
+
+  }
+
+  &__fact-inner{
+    padding:44px 24px 24px 24px;
+    border-bottom:5px solid $brand-secondary;
+    background-color:#fff;
+
+    @include media-breakpoint-up(md){
+      padding-left:30px;
+      padding-right:30px;
+    }
+
+    &:before{
+      width:36px;
+      height:37px;
+      display:block;
+      position:absolute;
+        top:26px; bottom:auto;
+        left:auto; right:35px;
+      background-repeat:no-repeat;
+      background-image:url("../images/icons-misc.png");
+      content:"";
+    }
+
+    &--world:before{
+      background-position:0 0;
+    }
+
+    &--plane:before{
+      background-position:-36px 0;
+    }
+  }
+
+  &__fact{
+    max-width:176px;
+    margin:0;
+    color:#959595;
+    text-transform:uppercase;
+  }
+
+  &__number{
+    color:#252525;
+    font-size:2.875rem;
+  }
+
+}
